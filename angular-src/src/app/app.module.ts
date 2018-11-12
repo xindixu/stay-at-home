@@ -22,6 +22,10 @@ import { FlashMessagesModule } from 'angular2-flash-messages/module';
 //services
 import { ValidateService } from './services/validate.service';
 import { AuthService } from "./services/auth.service";
+
+// guards
+import {AuthGuard} from './guards/auth.guard';
+
 // components
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './layouts/navbar/navbar.component';
@@ -65,7 +69,7 @@ import { HomeComponent } from './pages/home/home.component';
     MatFormFieldModule,
     MatCheckboxModule
   ],
-  providers: [ValidateService, AuthService],
+  providers: [ValidateService, AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,15 @@
+<div class="container form">
+  <h1>Login to cook more</h1>
+
+  <mat-card>
+    <form (ngSubmit)="loginUser($event)">
+      <mat-form-field>
+        <input matInput type="text" id="username" placeholder="Username" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput type="password" id="password" placeholder="Password" required>
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="submit" value="Login">Login</button>
+    </form>
+  </mat-card>
+</div>

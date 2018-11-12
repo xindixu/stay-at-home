@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+@import "./variables.scss";
+@import "./theme.scss";
+
+body {
+	/*background-image: url("assets/img/home_splash.jpg");
+	background-size: cover;*/
+	overflow-x: hidden;
+	p,span,a,li,input {
+		color:black;
+		font-family: $body-text;
+		font-size: $font-size-regular;
+	}
+
+	h1,h2,h3,h4,h5,h6{
+		font-family: $display-text;
+		color: $primary;
+	}
+
+	#main{
+		margin: 0px 100px;
+	}
+
+}
+
+/* add global styles, redefine bootstrap variables*/

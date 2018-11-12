@@ -24,7 +24,7 @@ import { ValidateService } from './services/validate.service';
 import { AuthService } from "./services/auth.service";
 
 // guards
-import {AuthGuard} from './guards/auth.guard';
+import { AuthGuard } from './guards/auth.guard';
 
 // components
 import { AppComponent } from './app.component';

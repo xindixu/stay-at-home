@@ -17,12 +17,12 @@ router.post('/register', (req, res, next) => {
     if (err) {
       res.json({
         success: false,
-        msg: 'fail to register'
+        msg: 'Sorry, fail to register.'
       });
     } else {
       res.json({
         success: true,
-        msg: 'success to register'
+        msg: 'Welcome, you are now registered!'
       });
     }
   });
@@ -38,7 +38,7 @@ router.post('/authenticate', (req, res, next) => {
     if (!user) {
       return res.json({
         success: false,
-        msg: 'user not found'
+        msg: 'Sorry, username not found.'
       });
     }
 
@@ -62,7 +62,7 @@ router.post('/authenticate', (req, res, next) => {
       } else {
         return res.json({
           success: false,
-          msg: 'wrong password'
+          msg: 'Sorry, wrong password!'
         });
       }
     });

@@ -1,0 +1,10 @@
+<<<<<<< HEAD
+.hero {
+	background-image: url("/assets/img/home_splash.jpg");
+	background-size: cover;
+}
+=======
+.card {
+  max-width: 400px;
+}
+>>>>>>> 9333b343553aba4e8670612f478a6a6980447df2

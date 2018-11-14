@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 
 // import Angular Material modules below
@@ -22,6 +23,7 @@ import { FlashMessagesModule } from 'angular2-flash-messages/module';
 //services
 import { ValidateService } from './services/validate.service';
 import { AuthService } from "./services/auth.service";
+import { IngredientService } from './services/ingredient.service';
 
 // guards
 import { AuthGuard } from './guards/auth.guard';
@@ -36,6 +38,8 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { HomeComponent } from './pages/home/home.component';
 
+import { GetIdPipe } from "./get-id.pipe";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,7 +49,8 @@ import { HomeComponent } from './pages/home/home.component';
     LoginComponent,
     ProfileComponent,
     DashboardComponent,
-    HomeComponent
+    HomeComponent,
+    GetIdPipe
   ],
   imports: [
     AppRoutingModule,
@@ -53,6 +58,7 @@ import { HomeComponent } from './pages/home/home.component';
     BrowserModule,
     BrowserAnimationsModule,
     HttpModule,
+    HttpClientModule,
     BrowserModule,
 
     //3rd-party modules
@@ -69,7 +75,7 @@ import { HomeComponent } from './pages/home/home.component';
     MatFormFieldModule,
     MatCheckboxModule
   ],
-  providers: [ValidateService, AuthService, AuthGuard],
+  providers: [ValidateService, AuthService, AuthGuard, IngredientService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

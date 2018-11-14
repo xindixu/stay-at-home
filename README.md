@@ -3,7 +3,7 @@ https://stay-at-home-and-lets-cook.herokuapp.com/#/home
 
 
 ## Get started
-Backend:
+Back-end:
 npm start
 http://localhost:8080
 

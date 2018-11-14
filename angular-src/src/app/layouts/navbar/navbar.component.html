@@ -1,0 +1,11 @@
+<mat-toolbar color="primary">
+  <a routerLink="/home" id="logoText"><img src="assets/images/logo.svg" width="25" height="25"> StayAtHome</a>
+  <span class="spacer"></span>
+  <span><a routerLink="/home" routerLinkActive="active">Home</a></span>
+  <span *ngIf="authService.loggedIn()"><a routerLink="/profile" routerLinkActive="active">Profile</a></span>
+  <span *ngIf="authService.loggedIn()"><a routerLink="/dashboard" routerLinkActive="active">Dashboard</a></span>
+  <span class="spacer"></span>
+  <span *ngIf="!authService.loggedIn()"><a routerLink="/login" routerLinkActive="active">Login</a></span>
+  <span *ngIf="authService.loggedIn()"><a (click)="onLogoutClick()" href="#">Log out</a></span>
+  <span *ngIf="!authService.loggedIn()"><a routerLink="/register" routerLinkActive="active">Register</a></span>
+</mat-toolbar>

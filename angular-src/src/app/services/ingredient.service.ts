@@ -11,7 +11,7 @@ export class IngredientService {
 
 	constructor(private _http: HttpClient) {
 		this.getIngredients().subscribe(data => {
-			console.log(data)
+			//console.log(data)
 		});
 	}
 

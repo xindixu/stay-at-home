@@ -19,7 +19,6 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 
 // 3rd-party modlules
 import { FlashMessagesModule } from 'angular2-flash-messages/module';
-
 //services
 import { ValidateService } from './services/validate.service';
 import { AuthService } from "./services/auth.service";
@@ -45,15 +44,15 @@ import { ResultComponent } from './pages/result/result.component';
 
 @NgModule({
   declarations: [
+    GetIdPipe,
     AppComponent,
     NavbarComponent,
     FooterComponent,
+    HomeComponent,
     RegisterComponent,
     LoginComponent,
     ProfileComponent,
     DashboardComponent,
-    HomeComponent,
-    GetIdPipe,
     ResultComponent
   ],
   imports: [

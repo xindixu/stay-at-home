@@ -13,7 +13,7 @@ export interface Tag {
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss'],
+  styleUrls: ['./home.component.scss']
 })
 
 export class HomeComponent implements OnInit {
@@ -43,9 +43,9 @@ export class HomeComponent implements OnInit {
     this.ingredientService.getIngredients()
       .subscribe(data => {
         this.ingredient = data;
-        console.log(this.ingredient[0]);
+        //console.log(this.ingredient[0]);
         this.ingredientKeys = Object.keys(this.ingredient);
-        console.log(this.ingredientKeys);
+        //console.log(this.ingredientKeys);
       });
 
   }

@@ -17,8 +17,6 @@
   <mat-card>
     <mat-card-content>
       <form #userForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
-        <!--         {{ userForm.value | json}} -->
-        <hr />
         {{ basketModel | json}}
         <section class="ingredient-section">
           <div *ngFor="let i of ingredientKeys">
@@ -28,16 +26,6 @@
             </div>
           </div>
         </section>
-
-        <!--         <section class="ingredient-section">
-        <div *ngFor="let i of range(0, ingredientKeys.length)">
-          <h2>{{i}}</h2>
-          <div *ngFor="let j of ingredient[0][i]" [ngModelGroup]="i">
-            <mat-checkbox class="example-margin" [name]="j" ngModel>{{j}}</mat-checkbox>
-          </div>
-        </div>
-      </section> -->
-
         <button type="submit" mat-raised-button color="primary">Submit</button>
       </form>
     </mat-card-content>

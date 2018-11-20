@@ -1,4 +1,5 @@
 export class Basket {
+	basket: any[];
 
 	constructor(
 		public meat: any,
@@ -6,23 +7,21 @@ export class Basket {
 		public dairy: any,
 		public grain: any,
 		public fruit: any
-	){}
+	){
+		this.basket = [meat,vegetable,dairy,grain,fruit];
+	}
 
 	stringify(){
-		// ex: {"meat":{},"vegetable":{"Carrot":true,"Potatoes":true},"dairy":{},"grain":{},"fruit":{}}
 		// angery not working SAD so sleeeeeeeeeeeepppppppppyyyyyy
-
 		// so try that npm checklist thingy, we don't need this probably
-		let result = "";
-		console.log(this);
-		for(let category in this){
-			console.log(category);
-			for(let item in category){
-				console.log(item);
+		//{Chicken: false, Ground Beef: true}
+		let result = [];
+		//console.log(this.basket);
+		for(let category in this.basket){
+			for(let item in this.basket[category]){
+				if(this.basket[category][item])result.push(item.toLowerCase());
 			}
 		}
-		console.log("from Basket class, stringify()")
-		console.log(result);
-		return result;
+		return result.join(",");
 	}
 }

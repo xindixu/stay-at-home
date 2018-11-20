@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { KeepsearchService } from '../../services/keepsearch.service';
+import { ApiService } from '../../services/api.service';
 
 @Component({
   selector: 'app-result',
@@ -7,9 +9,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResultComponent implements OnInit {
 
-  constructor() { }
+  query: string;
+
+  constructor(
+    private keepsearchService: KeepsearchService,
+    private apiService: ApiService,
+
+  ) { }
 
   ngOnInit() {
+    this.keepsearchService.currentSearch
+      .subscribe(search => {
+        this.query = search;
+      })
+  }
+
+  getSearchResult(){
+    console.log("query", this.query);
+    // test if api is working with hard code
+    this.apiService.getRecipeByIngredients('apple,flour')
+      .subscribe(
+        data => {
+          console.log('Here is your recipe', data);
+        },
+        error => console.log('Error!', error)
+      )
   }
 
 }

@@ -25,9 +25,12 @@ import { ValidateService } from './services/validate.service';
 import { AuthService } from "./services/auth.service";
 import { IngredientService } from './services/ingredient.service';
 import { ApiService } from './services/api.service';
+import { KeepsearchService } from './services/keepsearch.service';
 
 // guards
 import { AuthGuard } from './guards/auth.guard';
+
+import { GetIdPipe } from "./get-id.pipe";
 
 // components
 import { AppComponent } from './app.component';
@@ -38,8 +41,6 @@ import { LoginComponent } from './pages/login/login.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { HomeComponent } from './pages/home/home.component';
-
-import { GetIdPipe } from "./get-id.pipe";
 import { ResultComponent } from './pages/result/result.component';
 
 @NgModule({
@@ -83,7 +84,8 @@ import { ResultComponent } from './pages/result/result.component';
     AuthService,
     AuthGuard,
     IngredientService,
-    ApiService
+    ApiService,
+    KeepsearchService
   ],
   bootstrap: [AppComponent]
 })

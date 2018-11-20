@@ -63,7 +63,7 @@ export class HomeComponent implements OnInit {
     this.checkoutService.checkout(this.basketModel)
       .subscribe(
         data => {
-          console.log('Success!', data);
+          //console.log('Success!', data);
           this.keepsearchService.updateSearch(this.basketModel.stringify());
           //this.keepsearchService.updateSearch(JSON.stringify(this.basketModel));
           this.router.navigate(['/result']);

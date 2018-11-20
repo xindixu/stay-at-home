@@ -22,12 +22,13 @@ export class ResultComponent implements OnInit {
       .subscribe(search => {
         this.query = search;
       })
+    this.getSearchResult();
   }
 
   getSearchResult(){
     console.log("query", this.query);
     // test if api is working with hard code
-    this.apiService.getRecipeByIngredients('apple,flour')
+    this.apiService.getRecipeByIngredients(this.query)
       .subscribe(
         data => {
           console.log('Here is your recipe', data);

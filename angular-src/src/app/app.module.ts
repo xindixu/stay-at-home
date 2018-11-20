@@ -24,6 +24,7 @@ import { FlashMessagesModule } from 'angular2-flash-messages/module';
 import { ValidateService } from './services/validate.service';
 import { AuthService } from "./services/auth.service";
 import { IngredientService } from './services/ingredient.service';
+import { ApiService } from './services/api.service';
 
 // guards
 import { AuthGuard } from './guards/auth.guard';
@@ -39,6 +40,7 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { HomeComponent } from './pages/home/home.component';
 
 import { GetIdPipe } from "./get-id.pipe";
+import { ResultComponent } from './pages/result/result.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +52,8 @@ import { GetIdPipe } from "./get-id.pipe";
     ProfileComponent,
     DashboardComponent,
     HomeComponent,
-    GetIdPipe
+    GetIdPipe,
+    ResultComponent
   ],
   imports: [
     AppRoutingModule,
@@ -75,7 +78,13 @@ import { GetIdPipe } from "./get-id.pipe";
     MatFormFieldModule,
     MatCheckboxModule
   ],
-  providers: [ValidateService, AuthService, AuthGuard, IngredientService],
+  providers: [
+    ValidateService,
+    AuthService,
+    AuthGuard,
+    IngredientService,
+    ApiService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

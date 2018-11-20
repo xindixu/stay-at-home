@@ -18,10 +18,12 @@
     "cors": "*",
     "debug": "^4.1.0",
     "express": "*",
+    "hoek": "^5.0.4",
     "jsonwebtoken": "*",
     "mongoose": "*",
     "passport": "*",
-    "passport-jwt": "^4.0.0"
+    "passport-jwt": "^4.0.0",
+    "unirest": "^0.5.1"
   },
   "devDependencies": {
     "prettier": "^1.14.3",

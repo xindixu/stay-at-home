@@ -7,7 +7,7 @@ import { Basket } from '../basket';
 })
 export class CheckoutService {
 
-	_url = 'http://localhost:3000/checkout';
+	_url = 'http://localhost:8080/checkout';
 
  	constructor(private _http: HttpClient) { }
 

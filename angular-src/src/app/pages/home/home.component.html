@@ -13,14 +13,13 @@
   </div>
 </div>
 
+
 <mat-card>
   <mat-card-content>
     <form #userForm="ngForm" *ngIf="!submitted" (ngSubmit)="onSubmit()" novalidate>
-
-      {{ userForm.value | json}}
-      <hr/>
-      {{ basketModel | json}}
-
+<!--       {{ userForm.value | json}}
+<hr/>
+{{ basketModel | json}} -->
       <section class="ingredient-section">
         <div *ngFor="let i of ingredientKeys">
           <h2>{{i}}</h2>
@@ -39,7 +38,7 @@
         </div>
       </section> -->
 
-      <button type="submit" mat-button>Submit</button>
+      <button type="submit" mat-raised-button color="primary">Submit</button>
     </form>
     <div *ngIf="submitted">
       You just submitted this form to a nothing server!

@@ -1,7 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { IngredientService } from '../../services/ingredient.service';
-import { Basket } from '../../basket';
 import { CheckoutService } from '../../services/checkout.service';
+import { Basket } from '../../basket';
+import { ApiService } from '../../services/api.service';
 
 export interface Tag {
   name: string;
@@ -12,18 +13,23 @@ export interface Tag {
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
+
 export class HomeComponent implements OnInit {
   value = "";
   title = "Welcome to StayAtHome!";
-  submitted=false;
+  submitted = false;
 
-  basketModel = new Basket({"Fish":true, "Chicken":false},{},{},{},{});
+  basketModel = new Basket({ "Fish": true, "Chicken": false }, {}, {}, {}, {});
 
   ingredient = {};
   ingredientKeys = [];
 
-  constructor(private _ingredientService: IngredientService, private _checkoutService: CheckoutService) {
-    
+  constructor(
+    private ingredientService: IngredientService,
+    private checkoutService: CheckoutService,
+    private apiService: ApiService
+  ) {
+
   }
 
   ngOnInit() {
@@ -31,9 +37,10 @@ export class HomeComponent implements OnInit {
     // for (let i = 0; i < this.ingredient.length; i++) {
     //   this.ingredientKeys[i] = Object.keys(this.ingredient[i])[0];
     // }
-    this._ingredientService.getIngredients()
-      .subscribe(data => {this.ingredient = data; 
-        console.log(this.ingredient[0]); 
+    this.ingredientService.getIngredients()
+      .subscribe(data => {
+        this.ingredient = data;
+        console.log(this.ingredient[0]);
         this.ingredientKeys = Object.keys(this.ingredient);
         console.log(this.ingredientKeys);
       });
@@ -41,11 +48,18 @@ export class HomeComponent implements OnInit {
   }
 
   onSubmit() {
-    this.submitted=true;
-    this._checkoutService.checkout(this.basketModel)
+    this.submitted = true;
+    this.checkoutService.checkout(this.basketModel)
       .subscribe(
         data => console.log('Success!', data),
         error => console.error('Error!', error)
+      )
+
+    // test if api is working with hard code
+    this.apiService.getRecipeByIngredients('apple,flour')
+      .subscribe(
+        data => console.log('Here is your recipe', data),
+        error => console.log('Error!', error)
       )
   }
 

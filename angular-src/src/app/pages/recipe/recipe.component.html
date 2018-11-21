@@ -7,4 +7,6 @@
   <p>Likes: {{data.aggregateLikes}}</p>
 </div>
 <div><img [src]="data.image" alt=""></div>
-<p>{{data.instructions}}</p>
+<div *ngFor="let step of data.analyzedInstructions[0].steps">
+<p><span>{{step.number}}. </span>{{step.step}}</p>
+</div>

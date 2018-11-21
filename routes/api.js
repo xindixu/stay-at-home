@@ -38,7 +38,7 @@ router.get('/getRecipeById/:key', (req, res) => {
   const key = req.params.key;
   const path = `${endpoint}recipes/${key}/information`;
   // raw: https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/479101/information
-  unirest.get("https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/479101/information")
+  unirest.get(path)
     .header("X-Mashape-Key", "QbMSHHNOeumsh5jqIwu8zFSLKI6pp1Kw1qljsnfrSkq6hMGXns")
     .header("X-Mashape-Host", "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com")
     .end(function(result) {

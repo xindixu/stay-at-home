@@ -14,7 +14,6 @@ export class KeepsearchService {
 
   updateSearch(search: string){
     this.searchSource.next(search);
-    console.log(search);
   }
 
   constructor() { }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { KeepsearchService } from '../../services/keepsearch.service';
 import { ApiService } from '../../services/api.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-result',
@@ -15,7 +16,7 @@ export class ResultComponent implements OnInit {
   constructor(
     private keepsearchService: KeepsearchService,
     private apiService: ApiService,
-
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -27,7 +28,6 @@ export class ResultComponent implements OnInit {
   }
 
   getSearchResult(){
-    console.log("query", this.query);
     // test if api is working with hard code
 
     // [{},{},{}] length depends on option passed to apiin backend
@@ -53,13 +53,8 @@ export class ResultComponent implements OnInit {
   }
 
   getRecipeDetail(id:string){
-    this.apiService.getRecipeById(id)
-      .subscribe(
-        data => {
-          console.log('Recipe detail with id', data);
-        },
-        error => console.log('Error!', error)
-      )
+    this.keepsearchService.updateSearch(id);
+    this.router.navigate(['/recipe']);
   }
 
 }

@@ -1,3 +1,10 @@
-<p>
-  recipe works!
-</p>
+<h1>{{data.title}}</h1>
+<div>
+  <p>Total Time: {{data.readyInMinutes}} min</p>
+  <p>Prep Time: {{data.preparationMinutes}} min</p>
+  <p>Cooking Time: {{data.cookingMinutes}} min</p>
+  <p>Servings: {{data.servings}}</p>
+  <p>Likes: {{data.aggregateLikes}}</p>
+</div>
+<div><img [src]="data.image" alt=""></div>
+<p>{{data.instructions}}</p>

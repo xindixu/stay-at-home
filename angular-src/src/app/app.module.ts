@@ -41,6 +41,7 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ResultComponent } from './pages/result/result.component';
+import { RecipeComponent } from './pages/recipe/recipe.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { ResultComponent } from './pages/result/result.component';
     LoginComponent,
     ProfileComponent,
     DashboardComponent,
-    ResultComponent
+    ResultComponent,
+    RecipeComponent
   ],
   imports: [
     AppRoutingModule,

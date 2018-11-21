@@ -2,7 +2,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
-import { map } from 'rxjs/operators';
 
 export interface Recipe {
   title: string,
@@ -20,5 +19,9 @@ export class ApiService {
   getRecipeByIngredients(ingredient: string): Observable<Recipe[]> {
     // local: http://localhost:8080/api/findByIngredients
     return this.http.get<Recipe[]>('http://localhost:8080/api/findByIngredients/' + ingredient);
+  }
+  getRecipeById(id: string): Observable<Recipe[]> {
+    // local: http://localhost:8080/api/getRecipeById
+    return this.http.get<Recipe[]>('http://localhost:8080/api/getRecipeById/' + id);
   }
 }

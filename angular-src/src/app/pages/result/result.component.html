@@ -1,3 +1,9 @@
-<p>
-  {{query}}
-</p>
+<h1> Result for {{query}}</h1>
+<mat-card *ngFor="let i of data">
+  <mat-card-content>
+    <h3>{{i.title}}</h3>
+    <img [src]="i.image" alt="">
+    <p>Likes: {{i.likes}}</p>
+    <p>Used ingredients: {{i.usedIngredientCount}}</p>
+  </mat-card-content>
+</mat-card>

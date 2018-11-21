@@ -45,7 +45,7 @@ export class ResultComponent implements OnInit {
       .subscribe(
         data => {
           this.data = data;
-          console.log('Here is your recipe with ingredients', data);
+          console.log('Recipe with ingredients', data);
         },
         error => console.log('Error!', error)
       )
@@ -56,7 +56,7 @@ export class ResultComponent implements OnInit {
     this.apiService.getRecipeById(id)
       .subscribe(
         data => {
-          console.log('Recipe detail got from your id', data);
+          console.log('Recipe detail with id', data);
         },
         error => console.log('Error!', error)
       )

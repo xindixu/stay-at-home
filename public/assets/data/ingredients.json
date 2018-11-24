@@ -1,5 +1,7 @@
 {
     "meat": ["Fish", "Chicken", "Ground Beef", "Beef", "Pork"],
     "vegetable": ["Onion", "Lettuce", "Broccoli", "Spinach", "Bok Choy", "Carrot", "Potatoes"],
-    "dairy": ["Milk", "Cheese", "Yogurt"]
+    "dairy": ["Milk", "Cheese", "Yogurt"],
+    "grain": ["Whole Wheat Bread", "Rice", "Pasta"],
+    "fruit": ["Pineapple", "Peach"]
 }

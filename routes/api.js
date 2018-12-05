@@ -7,11 +7,10 @@ const querystring = require('querystring');
 
 
 const headers = {
-  "X-Mashape-Key": "QbMSHHNOeumsh5jqIwu8zFSLKI6pp1Kw1qljsnfrSkq6hMGXns",
+  "X-RapidAPI-Key": "QbMSHHNOeumsh5jqIwu8zFSLKI6pp1Kw1qljsnfrSkq6hMGXns",
   "X-Mashape-Host": "spoonacular-recipe-food-nutrition-v1.p.mashape.com"
 };
-
-const endpoint = 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/';
+const endpoint = 'https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/';
 
 router.get('/findByIngredients/:key', (req, res) => {
   const key = req.params.key;
@@ -24,8 +23,7 @@ router.get('/findByIngredients/:key', (req, res) => {
   const path = endpoint + pathname + '?' + params.toString();
 
   unirest.get(path)
-    .header("X-Mashape-Key", "QbMSHHNOeumsh5jqIwu8zFSLKI6pp1Kw1qljsnfrSkq6hMGXns")
-    .header("X-Mashape-Host", "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com")
+    .header("X-RapidAPI-Key", "QbMSHHNOeumsh5jqIwu8zFSLKI6pp1Kw1qljsnfrSkq6hMGXns")
     .end(function(response) {
       console.log(response.status, response.headers, response.body);
       // save the response to result
@@ -39,8 +37,7 @@ router.get('/getRecipeById/:key', (req, res) => {
   const path = `${endpoint}recipes/${key}/information`;
   // raw: https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/479101/information
   unirest.get(path)
-    .header("X-Mashape-Key", "QbMSHHNOeumsh5jqIwu8zFSLKI6pp1Kw1qljsnfrSkq6hMGXns")
-    .header("X-Mashape-Host", "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com")
+    .header("X-RapidAPI-Key", "QbMSHHNOeumsh5jqIwu8zFSLKI6pp1Kw1qljsnfrSkq6hMGXns")
     .end(function(result) {
       console.log(result.status, result.headers, result.body);
       res.send(result.body);
@@ -84,7 +81,7 @@ function recipes_search(query) {
     "instructionsRequired": true //Whether the recipes must have instructions.
   };
   unirest.get("https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/search?diet=vegetarian&excludeIngredients=coconut&intolerances=egg%2C+gluten&number=10&offset=0&query=burger&type=main+course")
-    .header("X-Mashape-Key", "QbMSHHNOeumsh5jqIwu8zFSLKI6pp1Kw1qljsnfrSkq6hMGXns")
+    .header("X-RapidAPI-Key", "QbMSHHNOeumsh5jqIwu8zFSLKI6pp1Kw1qljsnfrSkq6hMGXns")
     .header("X-Mashape-Host", "spoonacular-recipe-food-nutrition-v1.p.mashape.com")
     .end(function(result) {
       console.log(result.status, result.headers, result.body);
@@ -93,7 +90,7 @@ function recipes_search(query) {
 
 function guessNutritionByDishName() {
   unirest.get("https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/guessNutrition?title=Spaghetti+Aglio+et+Olio")
-    .header("X-Mashape-Key", "QbMSHHNOeumsh5jqIwu8zFSLKI6pp1Kw1qljsnfrSkq6hMGXns")
+    .header("X-RapidAPI-Key", "QbMSHHNOeumsh5jqIwu8zFSLKI6pp1Kw1qljsnfrSkq6hMGXns")
     .header("X-Mashape-Host", "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com")
     .end(function(result) {
       console.log(result.status, result.headers, result.body);

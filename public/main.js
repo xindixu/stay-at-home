@@ -1255,11 +1255,11 @@ var ApiService = /** @class */ (function () {
     }
     ApiService.prototype.getRecipeByIngredients = function (ingredient) {
         // local: http://localhost:8080/api/findByIngredients
-        return this.http.get('/api/findByIngredients/' + ingredient);
+        return this.http.get('http://localhost:8080/api/findByIngredients/' + ingredient);
     };
     ApiService.prototype.getRecipeById = function (id) {
         // local: http://localhost:8080/api/getRecipeById
-        return this.http.get('/api/getRecipeById/' + id);
+        return this.http.get('http://localhost:8080/api/getRecipeById/' + id);
     };
     ApiService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
@@ -1311,14 +1311,14 @@ var AuthService = /** @class */ (function () {
         headers.append('Content-Type', 'application/json');
         //local: http://localhost:8080/users/register
         // dist: user/register
-        return this.http.post('/users/register', user, { headers: headers })
+        return this.http.post('http://localhost:8080/users/register', user, { headers: headers })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) { return res.json(); }));
     };
     AuthService.prototype.authenticateUser = function (user) {
         var headers = new _angular_http__WEBPACK_IMPORTED_MODULE_1__["Headers"]();
         //local: http://localhost:8080/users/authenticate
         headers.append('Content-Type', 'application/json');
-        return this.http.post('/users/authenticate', user, { headers: headers })
+        return this.http.post('http://localhost:8080/users/authenticate', user, { headers: headers })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) { return res.json(); }));
     };
     AuthService.prototype.getProfile = function () {
@@ -1327,7 +1327,7 @@ var AuthService = /** @class */ (function () {
         headers.append('Authorization', this.authToken);
         headers.append('Content-Type', 'application/json');
         //local: http://localhost:8080/users/profile
-        return this.http.get('/users/profile', { headers: headers })
+        return this.http.get('http://localhost:8080/users/profile', { headers: headers })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) { return res.json(); }));
     };
     AuthService.prototype.loadToken = function () {
@@ -1384,10 +1384,10 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 var CheckoutService = /** @class */ (function () {
-    //_url = 'http://localhost:8080/checkout';
     function CheckoutService(_http) {
         this._http = _http;
-        this._url = '/checkout';
+        //_url = '/checkout';
+        this._url = 'http://localhost:8080/checkout';
     }
     CheckoutService.prototype.checkout = function (basket) {
         return this._http.post(this._url, basket);

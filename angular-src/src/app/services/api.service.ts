@@ -18,10 +18,10 @@ export class ApiService {
 
   getRecipeByIngredients(ingredient: string): Observable<Recipe[]> {
     // local: http://localhost:8080/api/findByIngredients
-    return this.http.get<Recipe[]>('/api/findByIngredients/' + ingredient);
+    return this.http.get<Recipe[]>('http://localhost:8080/api/findByIngredients/' + ingredient);
   }
   getRecipeById(id: string): Observable<Recipe[]> {
     // local: http://localhost:8080/api/getRecipeById
-    return this.http.get<Recipe[]>('/api/getRecipeById/' + id);
+    return this.http.get<Recipe[]>('http://localhost:8080/api/getRecipeById/' + id);
   }
 }

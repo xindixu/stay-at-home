@@ -6,8 +6,8 @@ import { Basket } from '../basket';
   providedIn: 'root'
 })
 export class CheckoutService {
-  _url = '/checkout';
-	//_url = 'http://localhost:8080/checkout';
+  //_url = '/checkout';
+	_url = 'http://localhost:8080/checkout';
 
  	constructor(private _http: HttpClient) { }
 

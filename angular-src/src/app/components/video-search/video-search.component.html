@@ -1,0 +1,4 @@
+<div *ngFor="let v of videos; let i = index" [attr.data-index]="i">
+  <iframe class="e2e-iframe-trusted-src" width="640" height="390" [src]="safeVideoUrls[i]"
+  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>

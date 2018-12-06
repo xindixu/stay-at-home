@@ -1,5 +1,4 @@
 <div id="home">
-
   <div class="header">
     <h1>{{ title }}</h1>
     <div class="search-bar">
@@ -12,24 +11,15 @@
       </mat-form-field>
     </div>
   </div>
+  
+  <app-ingredient-search></app-ingredient-search>
+
+  <app-video-search></app-video-search>
 
 
-  <mat-card>
-    <mat-card-content>
-      <form #userForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
-        {{ basketModel | json}}
-        <section class="ingredient-section">
-          <div *ngFor="let i of ingredientKeys">
-            <h2>{{i}}</h2>
-            <div *ngFor="let j of ingredient[i]" [ngModelGroup]="i">
-              <mat-checkbox class="example-margin" [name]="j" [(ngModel)]=basketModel[i][j]>{{j}}</mat-checkbox>
-            </div>
-          </div>
-        </section>
-        <button type="submit" mat-raised-button color="primary">Submit</button>
-      </form>
-    </mat-card-content>
-  </mat-card>
+  <br><br>
+
+
 
   <br><br><br>
 

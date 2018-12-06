@@ -24,10 +24,10 @@ export class ResultComponent implements OnInit {
       .subscribe(search => {
         this.query = search;
       })
-    this.getSearchResult();
+    this.getRecipeSearchResult();
   }
 
-  getSearchResult(){
+  getRecipeSearchResult(){
     // test if api is working with hard code
 
     // [{},{},{}] length depends on option passed to apiin backend

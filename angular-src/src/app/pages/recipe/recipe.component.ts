@@ -17,6 +17,7 @@ export class RecipeComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    // get the search result from keepsearchService
     this.keepsearchService.currentSearch
       .subscribe(search => {
         this.id = search;

@@ -1,29 +1,32 @@
 // URL encoding: https://stackoverflow.com/questions/6182356/what-is-2c-in-a-url
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const unirest = require('unirest');
-const url = require('url');
-const querystring = require('querystring');
-
+const unirest = require("unirest");
+const url = require("url");
+const querystring = require("querystring");
 
 const headers = {
   "X-RapidAPI-Key": "QbMSHHNOeumsh5jqIwu8zFSLKI6pp1Kw1qljsnfrSkq6hMGXns",
   "X-Mashape-Host": "spoonacular-recipe-food-nutrition-v1.p.mashape.com"
 };
-const endpoint = 'https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/';
+const endpoint = "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/";
 
-router.get('/findByIngredients/:key', (req, res) => {
+router.get("/findByIngredients/:key", (req, res) => {
   const key = req.params.key;
-  const pathname = 'recipes/findByIngredients';
+  const pathname = "recipes/findByIngredients";
   const params = new URLSearchParams({
     ingredients: key, //'apples,flour,sugar',
-    number: '2', // 5 - in production, 1 - in dev to save the quota
-    ranking: '1' // 1 - maximize used ingredients, 2 - minimize missing ingredients
+    number: "2", // 5 - in production, 1 - in dev to save the quota
+    ranking: "1" // 1 - maximize used ingredients, 2 - minimize missing ingredients
   });
-  const path = endpoint + pathname + '?' + params.toString();
+  const path = endpoint + pathname + "?" + params.toString();
 
-  unirest.get(path)
-    .header("X-RapidAPI-Key", "QbMSHHNOeumsh5jqIwu8zFSLKI6pp1Kw1qljsnfrSkq6hMGXns")
+  unirest
+    .get(path)
+    .header(
+      "X-RapidAPI-Key",
+      "QbMSHHNOeumsh5jqIwu8zFSLKI6pp1Kw1qljsnfrSkq6hMGXns"
+    )
     .end(function(response) {
       console.log(response.status, response.headers, response.body);
       // save the response to result
@@ -31,23 +34,50 @@ router.get('/findByIngredients/:key', (req, res) => {
     });
 });
 
-router.get('/getRecipeById/:key', (req, res) => {
+router.get("/getRecipeById/:key", (req, res) => {
   // id for test: 1016387
   const key = req.params.key;
   const path = `${endpoint}recipes/${key}/information`;
   // raw: https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/479101/information
-  unirest.get(path)
-    .header("X-RapidAPI-Key", "QbMSHHNOeumsh5jqIwu8zFSLKI6pp1Kw1qljsnfrSkq6hMGXns")
+  unirest
+    .get(path)
+    .header(
+      "X-RapidAPI-Key",
+      "QbMSHHNOeumsh5jqIwu8zFSLKI6pp1Kw1qljsnfrSkq6hMGXns"
+    )
     .end(function(result) {
       console.log(result.status, result.headers, result.body);
       res.send(result.body);
     });
-})
+});
+
+router.get("/getVideoByIngredients/:key", (req, res) => {
+  const key = req.params.key;
+  const pathname = "food/videos/search";
+  const params = new URLSearchParams({
+    query: key, //'apples,flour,sugar',
+    number: "2" // 5 - in production, 1 - in dev to save the quota
+  });
+  const path = endpoint + pathname + "?" + params.toString();
+  console.log(path);
+
+  unirest
+    .get(path)
+    .header(
+      "X-RapidAPI-Key",
+      "QbMSHHNOeumsh5jqIwu8zFSLKI6pp1Kw1qljsnfrSkq6hMGXns"
+    )
+    .end(function(result) {
+      console.log(result.status, result.headers, result.body);
+      res.send(result.body);
+    });
+});
 
 function getQueryFromRawUrl() {
   // to get the query - coding purposes only
-  let rawUrl = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients?ingredients=apples%2Cflour%2Csugar&number=1&ranking=1";
-  let parsedUrl = require('url').parse(rawUrl, true);
+  let rawUrl =
+    "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/food/videos/search?query=chicken&number=2";
+  let parsedUrl = require("url").parse(rawUrl, true);
   /*
     parsedUrl Url {
     protocol: 'https:',
@@ -66,32 +96,49 @@ function getQueryFromRawUrl() {
     href:
      'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients?ingredients=apples%2Cflour%2Csugar&number=1&ranking=1' }
   */
-
 }
 
 function recipes_search(query) {
   const optionalParameters = {
-    "cuisine": "",
-    "diet": "vegetarian",
-    "excludeIngredients": "coconut",
-    "intolerances": ["egg", "gluten"],
-    "number": 10, // number of result to return (0-10)
-    "offset": 0, // number of results to skip (0-900)
-    "type": "main course", // type of the recipe [main course, side dish, dessert, appetizer, salad, bread, breakfast, soup, beverage, sauce, or drink]
-    "instructionsRequired": true //Whether the recipes must have instructions.
+    cuisine: "",
+    diet: "vegetarian",
+    excludeIngredients: "coconut",
+    intolerances: ["egg", "gluten"],
+    number: 10, // number of result to return (0-10)
+    offset: 0, // number of results to skip (0-900)
+    type: "main course", // type of the recipe [main course, side dish, dessert, appetizer, salad, bread, breakfast, soup, beverage, sauce, or drink]
+    instructionsRequired: true //Whether the recipes must have instructions.
   };
-  unirest.get("https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/search?diet=vegetarian&excludeIngredients=coconut&intolerances=egg%2C+gluten&number=10&offset=0&query=burger&type=main+course")
-    .header("X-RapidAPI-Key", "QbMSHHNOeumsh5jqIwu8zFSLKI6pp1Kw1qljsnfrSkq6hMGXns")
-    .header("X-Mashape-Host", "spoonacular-recipe-food-nutrition-v1.p.mashape.com")
+  unirest
+    .get(
+      "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/search?diet=vegetarian&excludeIngredients=coconut&intolerances=egg%2C+gluten&number=10&offset=0&query=burger&type=main+course"
+    )
+    .header(
+      "X-RapidAPI-Key",
+      "QbMSHHNOeumsh5jqIwu8zFSLKI6pp1Kw1qljsnfrSkq6hMGXns"
+    )
+    .header(
+      "X-Mashape-Host",
+      "spoonacular-recipe-food-nutrition-v1.p.mashape.com"
+    )
     .end(function(result) {
       console.log(result.status, result.headers, result.body);
     });
 }
 
 function guessNutritionByDishName() {
-  unirest.get("https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/guessNutrition?title=Spaghetti+Aglio+et+Olio")
-    .header("X-RapidAPI-Key", "QbMSHHNOeumsh5jqIwu8zFSLKI6pp1Kw1qljsnfrSkq6hMGXns")
-    .header("X-Mashape-Host", "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com")
+  unirest
+    .get(
+      "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/guessNutrition?title=Spaghetti+Aglio+et+Olio"
+    )
+    .header(
+      "X-RapidAPI-Key",
+      "QbMSHHNOeumsh5jqIwu8zFSLKI6pp1Kw1qljsnfrSkq6hMGXns"
+    )
+    .header(
+      "X-Mashape-Host",
+      "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com"
+    )
     .end(function(result) {
       console.log(result.status, result.headers, result.body);
     });

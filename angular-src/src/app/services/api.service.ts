@@ -9,6 +9,7 @@ export interface Recipe {
   usedIngredientCount: number
 }
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -23,5 +24,10 @@ export class ApiService {
   getRecipeById(id: string): Observable<Recipe[]> {
     // local: http://localhost:8080/api/getRecipeById
     return this.http.get<Recipe[]>('http://localhost:8080/api/getRecipeById/' + id);
+  }
+
+  getVideoByIngredients(ingredient: string): Observable<any> {
+    // local: http://localhost:8080/api/findByIngredients
+    return this.http.get('http://localhost:8080/api/getVideoByIngredients/' + ingredient);
   }
 }

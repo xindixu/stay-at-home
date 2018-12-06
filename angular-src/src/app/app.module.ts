@@ -42,6 +42,10 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ResultComponent } from './pages/result/result.component';
 import { RecipeComponent } from './pages/recipe/recipe.component';
+import { VideoSearchComponent } from './components/video-search/video-search.component';
+import { IngredientSearchComponent } from './components/ingredient-search/ingredient-search.component';
+import { BypassSecurityComponent } from './components/bypass-security/bypass-security.component';
+import { ChatbotComponent } from './components/chatbot/chatbot.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +59,11 @@ import { RecipeComponent } from './pages/recipe/recipe.component';
     ProfileComponent,
     DashboardComponent,
     ResultComponent,
-    RecipeComponent
+    RecipeComponent,
+    VideoSearchComponent,
+    IngredientSearchComponent,
+    BypassSecurityComponent,
+    ChatbotComponent
   ],
   imports: [
     AppRoutingModule,

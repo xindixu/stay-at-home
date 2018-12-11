@@ -1,26 +1,10 @@
 <div id="home">
   <div class="header">
     <h1>{{ title }}</h1>
-    <div class="search-bar">
-      <mat-icon color="white" class="material-icons">search</mat-icon>
-      <mat-form-field>
-        <input matInput type="text" placeholder="I have these in my fridge" [(ngModel)]="value">
-        <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
-          <mat-icon>close</mat-icon>
-        </button>
-      </mat-form-field>
-    </div>
   </div>
-  
+  <app-chatbot></app-chatbot>
   <app-ingredient-search></app-ingredient-search>
-
   <app-video-search></app-video-search>
 
-
-  <br><br>
-
-
-
-  <br><br><br>
 
 </div>

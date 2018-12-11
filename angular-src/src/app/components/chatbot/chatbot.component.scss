@@ -1,0 +1,12 @@
+@import "../../../styles/variables.scss";
+
+.search-bar {
+  margin-top: 5vh;
+  .mat-icon{
+    font-size: $font-size-regular;
+  }
+  .mat-form-field{
+    width: 500px;
+    color: black;
+  }
+}

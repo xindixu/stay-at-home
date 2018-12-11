@@ -1,20 +1,7 @@
-@import "../../../styles/variables.scss";
 
 #home{
   .header{
-    height: 40vh;
     text-align: center;
-
-    .search-bar {
-      margin-top: 5vh;
-      .mat-icon{
-        font-size: $font-size-regular;
-      }
-      .mat-form-field{
-        width: 500px;
-        color: black;
-      }
-    }
   }
 }
 

@@ -59,6 +59,27 @@ router.get("/getVideoByIngredients/:key", (req, res) => {
     number: "2" // 5 - in production, 1 - in dev to save the quota
   });
   const path = endpoint + pathname + "?" + params.toString();
+  //console.log(path);
+
+  unirest
+    .get(path)
+    .header(
+      "X-RapidAPI-Key",
+      "QbMSHHNOeumsh5jqIwu8zFSLKI6pp1Kw1qljsnfrSkq6hMGXns"
+    )
+    .end(function(result) {
+      console.log(result.status, result.headers, result.body);
+      res.send(result.body);
+    });
+});
+
+router.get("/chatbot/:key", (req, res) => {
+  const key = req.params.key;
+  const pathname = "recipes/quickAnswer";
+  const params = new URLSearchParams({
+    q: key, // "donut recipes"
+  });
+  const path = endpoint + pathname + "?" + params.toString();
   console.log(path);
 
   unirest

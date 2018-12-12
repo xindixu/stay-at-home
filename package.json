@@ -21,6 +21,7 @@
     "hoek": "^5.0.4",
     "jsonwebtoken": "*",
     "mongoose": "*",
+    "npm": "^6.5.0",
     "passport": "*",
     "passport-jwt": "^4.0.0",
     "unirest": "^0.5.1"

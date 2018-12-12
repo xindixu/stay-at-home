@@ -31,11 +31,13 @@
       <form #userForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
         <section class="">
           <div *ngFor="let i of ingredientKeys">
+            <div class="col">
             <h2>{{i}}</h2>
             <div *ngFor="let j of ingredient[i]" [ngModelGroup]=i>
               <mat-checkbox class="example-margin" [name]="j" [(ngModel)]=basketModel[i][j]>{{j}}</mat-checkbox>
             </div>
           </div>
+        </div>
         </section>
         <button type="submit" mat-raised-button color="primary">Submdfgdfgit</button>
       </form>

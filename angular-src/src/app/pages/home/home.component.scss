@@ -1,19 +1,7 @@
-@import "../../../styles/variables.scss";
 
 #home{
   .header{
     text-align: center;
-
-    .search-bar {
-      margin-top: 5vh;
-      .mat-icon{
-        font-size: $font-size-regular;
-      }
-      .mat-form-field{
-        width: 500px;
-        color: black;
-      }
-    }
   }
   background-image: linear-gradient(to bottom, #FFF,#DDD);
   border-radius: 25px;

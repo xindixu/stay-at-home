@@ -19,7 +19,6 @@ export class HomeComponent implements OnInit {
   title = "stay at home";
 
   basketModel = new Basket({}, {}, {}, {}, {});
-
   ingredient = {};
   ingredientKeys = [];
 

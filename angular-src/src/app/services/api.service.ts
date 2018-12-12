@@ -30,4 +30,8 @@ export class ApiService {
     // local: http://localhost:8080/api/findByIngredients
     return this.http.get('http://localhost:8080/api/getVideoByIngredients/' + ingredient);
   }
+
+  getAnswerByQuestion(text:string): Observable<any> {
+    return this.http.get('http://localhost:8080/api/chatbot/' + text);
+  }
 }

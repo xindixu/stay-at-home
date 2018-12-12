@@ -19,7 +19,8 @@ export class Basket {
 		//console.log(this.basket);
 		for(let category in this.basket){
 			for(let item in this.basket[category]){
-				if(this.basket[category][item])result.push(item.toLowerCase());
+				if(this.basket[category][item])
+					result.push(item.toLowerCase());
 			}
 		}
 		return result.join(",");

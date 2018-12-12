@@ -16,7 +16,7 @@ export interface Tag {
 })
 export class HomeComponent implements OnInit {
   value = "";
-  title = "Welcome to StayAtHome!";
+  title = "stay at home";
 
   basketModel = new Basket({}, {}, {}, {}, {});
 

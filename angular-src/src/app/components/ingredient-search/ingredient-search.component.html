@@ -1,15 +1,43 @@
-  <mat-card>
+
+
+<form #userForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
+  <mat-grid-list cols="6" rowHeight="80px" (window:resize)="onResize($event)">
+      <mat-grid-tile rowspan="4" [colspan]="cols_breakpoint">
+        <mat-card class="inside_card">
+          <mat-card-content>
+              <h4>Select ingredients in your fridge and see which recipes you can make!</h4>
+
+            </mat-card-content>
+        </mat-card>
+      </mat-grid-tile>
+    
+      <mat-grid-tile *ngFor="let i of tiles" [colspan]="cols_breakpoint" [rowspan]="i.rows" [style.background]="i.color" >
+        <mat-card class="inside_card">
+          <mat-card-content>
+            <h2>{{i.header}}</h2>
+            <div *ngFor="let j of i.ingredients" [ngModelGroup]=i.header>
+              <mat-checkbox [name]=j [(ngModel)]=basketModel[i.header][j]>{{j}}</mat-checkbox>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </mat-grid-tile>
+
+  </mat-grid-list>
+  <button type="submit" mat-raised-button color="primary" style="width: 99%">Submit</button>
+</form>
+
+<!--   <mat-card>
     <mat-card-content>
       <form #userForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
-        <section class="ingredient-section">
+        <section class="">
           <div *ngFor="let i of ingredientKeys">
             <h2>{{i}}</h2>
-            <div *ngFor="let j of ingredient[i]" [ngModelGroup]="i">
+            <div *ngFor="let j of ingredient[i]" [ngModelGroup]=i>
               <mat-checkbox class="example-margin" [name]="j" [(ngModel)]=basketModel[i][j]>{{j}}</mat-checkbox>
             </div>
           </div>
         </section>
-        <button type="submit" mat-raised-button color="primary">Submit</button>
+        <button type="submit" mat-raised-button color="primary">Submdfgdfgit</button>
       </form>
     </mat-card-content>
-  </mat-card>
+  </mat-card> -->

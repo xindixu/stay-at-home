@@ -31,7 +31,7 @@ export class VideoSearchComponent implements OnInit {
   // https://medium.com/@balramchavan/using-async-await-feature-in-angular-587dd56fdc77
 
    ngOnInit() {
-    this.getVideoByIngredients();
+    //this.getVideoByIngredients();
 
   }
 

@@ -16,20 +16,18 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-
+import { MatGridListModule } from '@angular/material/grid-list';
 // 3rd-party modlules
 import { FlashMessagesModule } from 'angular2-flash-messages/module';
 //services
 import { ValidateService } from './services/validate.service';
-import { AuthService } from "./services/auth.service";
+import { AuthService } from './services/auth.service';
 import { IngredientService } from './services/ingredient.service';
 import { ApiService } from './services/api.service';
 import { KeepsearchService } from './services/keepsearch.service';
 
 // guards
 import { AuthGuard } from './guards/auth.guard';
-
-import { GetIdPipe } from "./get-id.pipe";
 
 // components
 import { AppComponent } from './app.component';
@@ -49,7 +47,6 @@ import { ChatbotComponent } from './components/chatbot/chatbot.component';
 
 @NgModule({
   declarations: [
-    GetIdPipe,
     AppComponent,
     NavbarComponent,
     FooterComponent,
@@ -86,7 +83,8 @@ import { ChatbotComponent } from './components/chatbot/chatbot.component';
     MatChipsModule,
     MatInputModule,
     MatFormFieldModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatGridListModule
   ],
   providers: [
     ValidateService,
@@ -98,4 +96,4 @@ import { ChatbotComponent } from './components/chatbot/chatbot.component';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

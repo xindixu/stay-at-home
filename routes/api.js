@@ -4,6 +4,7 @@ const router = express.Router();
 const unirest = require("unirest");
 const url = require("url");
 const querystring = require("querystring");
+var URLSearchParams = require('url-search-params');
 
 const headers = {
   "X-RapidAPI-Key": "QbMSHHNOeumsh5jqIwu8zFSLKI6pp1Kw1qljsnfrSkq6hMGXns",
@@ -14,11 +15,23 @@ const endpoint = "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/";
 router.get("/findByIngredients/:key", (req, res) => {
   const key = req.params.key;
   const pathname = "recipes/findByIngredients";
+
   const params = new URLSearchParams({
     ingredients: key, //'apples,flour,sugar',
     number: "2", // 5 - in production, 1 - in dev to save the quota
     ranking: "1" // 1 - maximize used ingredients, 2 - minimize missing ingredients
   });
+
+  // const params = function(name){
+  //   var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+  //   if (results==null){
+  //      return null;
+  //   }
+  //   else{
+  //      return decodeURI(results[1]) || 0;
+  //   }
+  // }
+
   const path = endpoint + pathname + "?" + params.toString();
 
   unirest

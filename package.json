@@ -24,7 +24,9 @@
     "npm": "^6.5.0",
     "passport": "*",
     "passport-jwt": "^4.0.0",
-    "unirest": "^0.5.1"
+    "unirest": "^0.5.1",
+    "url-search-params": "^1.1.0",
+    "url-search-params-polyfill": "^5.0.0"
   },
   "devDependencies": {
     "prettier": "^1.14.3",

@@ -18,7 +18,7 @@ router.get("/findByIngredients/:key", (req, res) => {
 
   const params = new URLSearchParams({
     ingredients: key, //'apples,flour,sugar',
-    number: "2", // 5 - in production, 1 - in dev to save the quota
+    number: "5", // 5 - in production, 1 - in dev to save the quota
     ranking: "1" // 1 - maximize used ingredients, 2 - minimize missing ingredients
   });
 
@@ -69,7 +69,7 @@ router.get("/getVideoByIngredients/:key", (req, res) => {
   const pathname = "food/videos/search";
   const params = new URLSearchParams({
     query: key, //'apples,flour,sugar',
-    number: "2" // 5 - in production, 1 - in dev to save the quota
+    number: "4" // 5 - in production, 1 - in dev to save the quota
   });
   const path = endpoint + pathname + "?" + params.toString();
   //console.log(path);

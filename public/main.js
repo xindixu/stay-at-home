@@ -1672,14 +1672,14 @@ var AuthService = /** @class */ (function () {
         headers.append('Content-Type', 'application/json');
         //local: http://localhost:8080/users/register
         // dist: user/register
-        return this.http.post('http://localhost:8080/users/register', user, { headers: headers })
+        return this.http.post('/users/register', user, { headers: headers })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) { return res.json(); }));
     };
     AuthService.prototype.authenticateUser = function (user) {
         var headers = new _angular_http__WEBPACK_IMPORTED_MODULE_1__["Headers"]();
         //local: http://localhost:8080/users/authenticate
         headers.append('Content-Type', 'application/json');
-        return this.http.post('http://localhost:8080/users/authenticate', user, { headers: headers })
+        return this.http.post('/users/authenticate', user, { headers: headers })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) { return res.json(); }));
     };
     AuthService.prototype.getProfile = function () {
@@ -1688,7 +1688,7 @@ var AuthService = /** @class */ (function () {
         headers.append('Authorization', this.authToken);
         headers.append('Content-Type', 'application/json');
         //local: http://localhost:8080/users/profile
-        return this.http.get('http://localhost:8080/users/profile', { headers: headers })
+        return this.http.get('/users/profile', { headers: headers })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) { return res.json(); }));
     };
     AuthService.prototype.loadToken = function () {

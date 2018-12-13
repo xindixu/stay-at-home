@@ -1,16 +1,14 @@
-
-
+<h2>Search by Ingredients</h2>
 <form #userForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
   <mat-grid-list cols="6" rowHeight="80px" (window:resize)="onResize($event)">
       <mat-grid-tile rowspan="4" [colspan]="cols_breakpoint">
         <mat-card class="inside_card">
           <mat-card-content>
               <h4>Select ingredients in your fridge and see which recipes you can make!</h4>
-
             </mat-card-content>
         </mat-card>
       </mat-grid-tile>
-    
+
       <mat-grid-tile *ngFor="let i of tiles" [colspan]="cols_breakpoint" [rowspan]="i.rows" [style.background]="i.color" >
         <mat-card class="inside_card">
           <mat-card-content>

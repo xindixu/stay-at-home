@@ -15,8 +15,11 @@ export class VideoSearchComponent implements OnInit {
   data: any[];
   videos: any[];
   videoIds: string[];
+  value = "";
 
   safeVideoUrls: SafeResourceUrl[];
+
+  cols_breakpoint;
 
   constructor(
     private apiService: ApiService,
@@ -32,11 +35,10 @@ export class VideoSearchComponent implements OnInit {
 
    ngOnInit() {
     //this.getVideoByIngredients();
-
   }
 
-  getVideoByIngredients() {
-    this.apiService.getVideoByIngredients("chicken").subscribe(
+  getVideoByIngredients(query: string) {
+    this.apiService.getVideoByIngredients(query).subscribe(
       data => {
         this.data = data;
         this.videos = data.videos;
@@ -47,6 +49,9 @@ export class VideoSearchComponent implements OnInit {
     );
   }
 
+  search(){
+    this.getVideoByIngredients(this.value);
+  }
   updateVideoUrl(id: string) {
       // Appending an ID to a YouTube URL is safe.
       // Always make sure to construct SafeValue objects as

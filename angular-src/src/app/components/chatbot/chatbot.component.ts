@@ -14,7 +14,6 @@ export class ChatbotComponent implements OnInit {
 
   }
 
-  //TODO: connect to backend api & test
   ngOnInit() {
 
   }
@@ -30,7 +29,6 @@ export class ChatbotComponent implements OnInit {
   }
 
   ask(){
-    console.log(this.value);
     this.getAnswerByQuestion(this.value);
   }
 }

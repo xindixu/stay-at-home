@@ -12,18 +12,20 @@
   border-width: 5px;
   border-color: #EEE;
   box-shadow: inset 0 0 100px #BBB;
-
   padding: 20px;
-}
 
-.result_image {
-	float: right;
-	height: 100%;
-	padding: 20px;
-	border-radius: 40px;
-}
+  .result_card {
+    max-height: 500px;
+    height: 300px;
+    cursor: pointer;
 
-.result_card {
-  max-height: 500px;
-  height: 300px;
+    .result_image {
+    	float: right;
+    	height: 100%;
+    	padding: 20px;
+    	border-radius: 40px;
+    }
+    
+  }
+
 }

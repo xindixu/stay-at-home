@@ -10,7 +10,7 @@ body {
 	/*background-image: url("assets/img/home_splash.jpg");
 	background-size: cover;*/
 	overflow-x: hidden;
-	p,span,a,li,input {
+	p,span,a,li,input,.mat-input-element {
 		color:black;
 		font-family: $body-text;
 		font-size: $font-size-regular;

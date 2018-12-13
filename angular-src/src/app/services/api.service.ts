@@ -19,19 +19,19 @@ export class ApiService {
 
   getRecipeByIngredients(ingredient: string): Observable<Recipe[]> {
     // local: http://localhost:8080/api/findByIngredients
-    return this.http.get<Recipe[]>('http://localhost:8080/api/findByIngredients/' + ingredient);
+    return this.http.get<Recipe[]>('/api/findByIngredients/' + ingredient);
   }
   getRecipeById(id: string): Observable<Recipe[]> {
     // local: http://localhost:8080/api/getRecipeById
-    return this.http.get<Recipe[]>('http://localhost:8080/api/getRecipeById/' + id);
+    return this.http.get<Recipe[]>('/api/getRecipeById/' + id);
   }
 
   getVideoByIngredients(ingredient: string): Observable<any> {
     // local: http://localhost:8080/api/findByIngredients
-    return this.http.get('http://localhost:8080/api/getVideoByIngredients/' + ingredient);
+    return this.http.get('/api/getVideoByIngredients/' + ingredient);
   }
 
   getAnswerByQuestion(text:string): Observable<any> {
-    return this.http.get('http://localhost:8080/api/chatbot/' + text);
+    return this.http.get('/api/chatbot/' + text);
   }
 }

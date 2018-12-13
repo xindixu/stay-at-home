@@ -180,15 +180,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_material_input__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/material/input */ "./node_modules/@angular/material/esm5/input.es5.js");
 /* harmony import */ var _angular_material_form_field__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/material/form-field */ "./node_modules/@angular/material/esm5/form-field.es5.js");
 /* harmony import */ var _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/material/checkbox */ "./node_modules/@angular/material/esm5/checkbox.es5.js");
-/* harmony import */ var angular2_flash_messages_module__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! angular2-flash-messages/module */ "./node_modules/angular2-flash-messages/module/index.js");
-/* harmony import */ var angular2_flash_messages_module__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(angular2_flash_messages_module__WEBPACK_IMPORTED_MODULE_16__);
-/* harmony import */ var _services_validate_service__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./services/validate.service */ "./src/app/services/validate.service.ts");
-/* harmony import */ var _services_auth_service__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./services/auth.service */ "./src/app/services/auth.service.ts");
-/* harmony import */ var _services_ingredient_service__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./services/ingredient.service */ "./src/app/services/ingredient.service.ts");
-/* harmony import */ var _services_api_service__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./services/api.service */ "./src/app/services/api.service.ts");
-/* harmony import */ var _services_keepsearch_service__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./services/keepsearch.service */ "./src/app/services/keepsearch.service.ts");
-/* harmony import */ var _guards_auth_guard__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./guards/auth.guard */ "./src/app/guards/auth.guard.ts");
-/* harmony import */ var _get_id_pipe__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./get-id.pipe */ "./src/app/get-id.pipe.ts");
+/* harmony import */ var _angular_material_grid_list__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/material/grid-list */ "./node_modules/@angular/material/esm5/grid-list.es5.js");
+/* harmony import */ var angular2_flash_messages_module__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! angular2-flash-messages/module */ "./node_modules/angular2-flash-messages/module/index.js");
+/* harmony import */ var angular2_flash_messages_module__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(angular2_flash_messages_module__WEBPACK_IMPORTED_MODULE_17__);
+/* harmony import */ var _services_validate_service__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./services/validate.service */ "./src/app/services/validate.service.ts");
+/* harmony import */ var _services_auth_service__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./services/auth.service */ "./src/app/services/auth.service.ts");
+/* harmony import */ var _services_ingredient_service__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./services/ingredient.service */ "./src/app/services/ingredient.service.ts");
+/* harmony import */ var _services_api_service__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./services/api.service */ "./src/app/services/api.service.ts");
+/* harmony import */ var _services_keepsearch_service__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./services/keepsearch.service */ "./src/app/services/keepsearch.service.ts");
+/* harmony import */ var _guards_auth_guard__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./guards/auth.guard */ "./src/app/guards/auth.guard.ts");
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
 /* harmony import */ var _layouts_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./layouts/navbar/navbar.component */ "./src/app/layouts/navbar/navbar.component.ts");
 /* harmony import */ var _layouts_footer_footer_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./layouts/footer/footer.component */ "./src/app/layouts/footer/footer.component.ts");
@@ -199,6 +199,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_home_home_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./pages/home/home.component */ "./src/app/pages/home/home.component.ts");
 /* harmony import */ var _pages_result_result_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./pages/result/result.component */ "./src/app/pages/result/result.component.ts");
 /* harmony import */ var _pages_recipe_recipe_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./pages/recipe/recipe.component */ "./src/app/pages/recipe/recipe.component.ts");
+/* harmony import */ var _components_video_search_video_search_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./components/video-search/video-search.component */ "./src/app/components/video-search/video-search.component.ts");
+/* harmony import */ var _components_ingredient_search_ingredient_search_component__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./components/ingredient-search/ingredient-search.component */ "./src/app/components/ingredient-search/ingredient-search.component.ts");
+/* harmony import */ var _components_bypass_security_bypass_security_component__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./components/bypass-security/bypass-security.component */ "./src/app/components/bypass-security/bypass-security.component.ts");
+/* harmony import */ var _components_chatbot_chatbot_component__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./components/chatbot/chatbot.component */ "./src/app/components/chatbot/chatbot.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -222,6 +226,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
 // 3rd-party modlules
 
 //services
@@ -232,8 +237,11 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 // guards
 
-
 // components
+
+
+
+
 
 
 
@@ -250,7 +258,6 @@ var AppModule = /** @class */ (function () {
     AppModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
             declarations: [
-                _get_id_pipe__WEBPACK_IMPORTED_MODULE_23__["GetIdPipe"],
                 _app_component__WEBPACK_IMPORTED_MODULE_24__["AppComponent"],
                 _layouts_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_25__["NavbarComponent"],
                 _layouts_footer_footer_component__WEBPACK_IMPORTED_MODULE_26__["FooterComponent"],
@@ -260,7 +267,11 @@ var AppModule = /** @class */ (function () {
                 _pages_profile_profile_component__WEBPACK_IMPORTED_MODULE_29__["ProfileComponent"],
                 _pages_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_30__["DashboardComponent"],
                 _pages_result_result_component__WEBPACK_IMPORTED_MODULE_32__["ResultComponent"],
-                _pages_recipe_recipe_component__WEBPACK_IMPORTED_MODULE_33__["RecipeComponent"]
+                _pages_recipe_recipe_component__WEBPACK_IMPORTED_MODULE_33__["RecipeComponent"],
+                _components_video_search_video_search_component__WEBPACK_IMPORTED_MODULE_34__["VideoSearchComponent"],
+                _components_ingredient_search_ingredient_search_component__WEBPACK_IMPORTED_MODULE_35__["IngredientSearchComponent"],
+                _components_bypass_security_bypass_security_component__WEBPACK_IMPORTED_MODULE_36__["BypassSecurityComponent"],
+                _components_chatbot_chatbot_component__WEBPACK_IMPORTED_MODULE_37__["ChatbotComponent"]
             ],
             imports: [
                 _app_routing_module__WEBPACK_IMPORTED_MODULE_6__["AppRoutingModule"],
@@ -271,7 +282,7 @@ var AppModule = /** @class */ (function () {
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClientModule"],
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
                 //3rd-party modules
-                angular2_flash_messages_module__WEBPACK_IMPORTED_MODULE_16__["FlashMessagesModule"].forRoot(),
+                angular2_flash_messages_module__WEBPACK_IMPORTED_MODULE_17__["FlashMessagesModule"].forRoot(),
                 // import Angular Material below
                 _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_7__["MatToolbarModule"],
                 _angular_material_card__WEBPACK_IMPORTED_MODULE_8__["MatCardModule"],
@@ -281,15 +292,16 @@ var AppModule = /** @class */ (function () {
                 _angular_material_chips__WEBPACK_IMPORTED_MODULE_12__["MatChipsModule"],
                 _angular_material_input__WEBPACK_IMPORTED_MODULE_13__["MatInputModule"],
                 _angular_material_form_field__WEBPACK_IMPORTED_MODULE_14__["MatFormFieldModule"],
-                _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_15__["MatCheckboxModule"]
+                _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_15__["MatCheckboxModule"],
+                _angular_material_grid_list__WEBPACK_IMPORTED_MODULE_16__["MatGridListModule"]
             ],
             providers: [
-                _services_validate_service__WEBPACK_IMPORTED_MODULE_17__["ValidateService"],
-                _services_auth_service__WEBPACK_IMPORTED_MODULE_18__["AuthService"],
-                _guards_auth_guard__WEBPACK_IMPORTED_MODULE_22__["AuthGuard"],
-                _services_ingredient_service__WEBPACK_IMPORTED_MODULE_19__["IngredientService"],
-                _services_api_service__WEBPACK_IMPORTED_MODULE_20__["ApiService"],
-                _services_keepsearch_service__WEBPACK_IMPORTED_MODULE_21__["KeepsearchService"]
+                _services_validate_service__WEBPACK_IMPORTED_MODULE_18__["ValidateService"],
+                _services_auth_service__WEBPACK_IMPORTED_MODULE_19__["AuthService"],
+                _guards_auth_guard__WEBPACK_IMPORTED_MODULE_23__["AuthGuard"],
+                _services_ingredient_service__WEBPACK_IMPORTED_MODULE_20__["IngredientService"],
+                _services_api_service__WEBPACK_IMPORTED_MODULE_21__["ApiService"],
+                _services_keepsearch_service__WEBPACK_IMPORTED_MODULE_22__["KeepsearchService"]
             ],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_24__["AppComponent"]]
         })
@@ -341,43 +353,403 @@ var Basket = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/get-id.pipe.ts":
-/*!********************************!*\
-  !*** ./src/app/get-id.pipe.ts ***!
-  \********************************/
-/*! exports provided: GetIdPipe */
+/***/ "./src/app/components/bypass-security/bypass-security.component.html":
+/*!***************************************************************************!*\
+  !*** ./src/app/components/bypass-security/bypass-security.component.html ***!
+  \***************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<h4>Resource URL:</h4>\n<p>Showing: {{dangerousVideoUrl}}</p>\n<p>Trusted:</p>\n<iframe class=\"e2e-iframe-trusted-src\" width=\"640\" height=\"390\" [src]=\"videoUrl\"></iframe>\n"
+
+/***/ }),
+
+/***/ "./src/app/components/bypass-security/bypass-security.component.scss":
+/*!***************************************************************************!*\
+  !*** ./src/app/components/bypass-security/bypass-security.component.scss ***!
+  \***************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/components/bypass-security/bypass-security.component.ts":
+/*!*************************************************************************!*\
+  !*** ./src/app/components/bypass-security/bypass-security.component.ts ***!
+  \*************************************************************************/
+/*! exports provided: BypassSecurityComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GetIdPipe", function() { return GetIdPipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BypassSecurityComponent", function() { return BypassSecurityComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 
-var GetIdPipe = /** @class */ (function () {
-    function GetIdPipe() {
+
+var BypassSecurityComponent = /** @class */ (function () {
+    function BypassSecurityComponent(sanitizer) {
+        this.sanitizer = sanitizer;
+        // javascript: URLs are dangerous if attacker controlled.
+        // Angular sanitizes them in data binding, but you can
+        // explicitly tell Angular to trust this value:
+        this.dangerousUrl = 'javascript:alert("Hi there")';
+        this.trustedUrl = sanitizer.bypassSecurityTrustUrl(this.dangerousUrl);
+        this.updateVideoUrl('PUBnlbjZFAI');
     }
-    GetIdPipe.prototype.transform = function (value) {
-        var args = [];
-        for (var _i = 1; _i < arguments.length; _i++) {
-            args[_i - 1] = arguments[_i];
-        }
-        console.log(value);
-        var a = value.replace(/\s/g, '');
-        return a.charAt(0).toLowerCase() + a.slice(1);
-        ;
+    BypassSecurityComponent.prototype.updateVideoUrl = function (id) {
+        // Appending an ID to a YouTube URL is safe.
+        // Always make sure to construct SafeValue objects as
+        // close as possible to the input data so
+        // that it's easier to check if the value is safe.
+        this.dangerousVideoUrl = 'https://www.youtube.com/embed/' + id;
+        this.videoUrl =
+            this.sanitizer.bypassSecurityTrustResourceUrl(this.dangerousVideoUrl);
     };
-    GetIdPipe = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Pipe"])({
-            name: 'getId'
-        })
-    ], GetIdPipe);
-    return GetIdPipe;
+    BypassSecurityComponent.prototype.ngOnInit = function () {
+    };
+    BypassSecurityComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-bypass-security',
+            template: __webpack_require__(/*! ./bypass-security.component.html */ "./src/app/components/bypass-security/bypass-security.component.html"),
+            styles: [__webpack_require__(/*! ./bypass-security.component.scss */ "./src/app/components/bypass-security/bypass-security.component.scss")]
+        }),
+        __metadata("design:paramtypes", [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["DomSanitizer"]])
+    ], BypassSecurityComponent);
+    return BypassSecurityComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/chatbot/chatbot.component.html":
+/*!***********************************************************!*\
+  !*** ./src/app/components/chatbot/chatbot.component.html ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"search-bar\">\n  <h2>Nutruition Chatbot</h2>\n  <mat-icon color=\"white\" class=\"material-icons\">search</mat-icon>\n  <mat-form-field>\n    <input matInput type=\"text\" placeholder=\"Ask me any question about food...\" [(ngModel)]=\"value\">\n    <button mat-button *ngIf=\"value\" matSuffix mat-icon-button aria-label=\"Clear\" (click)=\"value=''\">\n      <mat-icon>close</mat-icon>\n    </button>\n  </mat-form-field>\n  <button mat-raised-button color=\"primary\" (click)=\"ask()\">Ask!</button>\n\n  <p *ngIf=\"data\">{{data.answer}}</p>\n\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/app/components/chatbot/chatbot.component.scss":
+/*!***********************************************************!*\
+  !*** ./src/app/components/chatbot/chatbot.component.scss ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".search-bar {\n  margin-top: 5vh; }\n  .search-bar .mat-icon {\n    font-size: 16px; }\n  .search-bar .mat-form-field {\n    width: 500px;\n    color: black; }\n  .search-bar button {\n    margin-left: 10px; }\n"
+
+/***/ }),
+
+/***/ "./src/app/components/chatbot/chatbot.component.ts":
+/*!*********************************************************!*\
+  !*** ./src/app/components/chatbot/chatbot.component.ts ***!
+  \*********************************************************/
+/*! exports provided: ChatbotComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ChatbotComponent", function() { return ChatbotComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_api_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/api.service */ "./src/app/services/api.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var ChatbotComponent = /** @class */ (function () {
+    function ChatbotComponent(apiService) {
+        this.apiService = apiService;
+        this.value = "";
+    }
+    ChatbotComponent.prototype.ngOnInit = function () {
+    };
+    ChatbotComponent.prototype.getAnswerByQuestion = function (question) {
+        var _this = this;
+        this.apiService.getAnswerByQuestion(question).subscribe(function (data) {
+            _this.data = data;
+            console.log("Answer is here", data);
+        }, function (error) { return console.log("Error", error); });
+    };
+    ChatbotComponent.prototype.ask = function () {
+        this.getAnswerByQuestion(this.value);
+    };
+    ChatbotComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: "app-chatbot",
+            template: __webpack_require__(/*! ./chatbot.component.html */ "./src/app/components/chatbot/chatbot.component.html"),
+            styles: [__webpack_require__(/*! ./chatbot.component.scss */ "./src/app/components/chatbot/chatbot.component.scss")]
+        }),
+        __metadata("design:paramtypes", [_services_api_service__WEBPACK_IMPORTED_MODULE_1__["ApiService"]])
+    ], ChatbotComponent);
+    return ChatbotComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/ingredient-search/ingredient-search.component.html":
+/*!*******************************************************************************!*\
+  !*** ./src/app/components/ingredient-search/ingredient-search.component.html ***!
+  \*******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<h2>Search by Ingredients</h2>\n<form #userForm=\"ngForm\" (ngSubmit)=\"onSubmit()\" novalidate>\n  <mat-grid-list cols=\"6\" rowHeight=\"80px\" (window:resize)=\"onResize($event)\">\n      <mat-grid-tile rowspan=\"4\" [colspan]=\"cols_breakpoint\">\n        <mat-card class=\"inside_card\">\n          <mat-card-content>\n              <h4>Select ingredients in your fridge and see which recipes you can make!</h4>\n            </mat-card-content>\n        </mat-card>\n      </mat-grid-tile>\n\n      <mat-grid-tile *ngFor=\"let i of tiles\" [colspan]=\"cols_breakpoint\" [rowspan]=\"i.rows\" [style.background]=\"i.color\" >\n        <mat-card class=\"inside_card\">\n          <mat-card-content>\n            <h2>{{i.header}}</h2>\n            <div *ngFor=\"let j of i.ingredients\" [ngModelGroup]=i.header>\n              <mat-checkbox [name]=j [(ngModel)]=basketModel[i.header][j]>{{j}}</mat-checkbox>\n            </div>\n          </mat-card-content>\n        </mat-card>\n      </mat-grid-tile>\n\n  </mat-grid-list>\n  <button type=\"submit\" mat-raised-button color=\"primary\" style=\"width: 99%\">Submit</button>\n</form>\n\n<!--   <mat-card>\n    <mat-card-content>\n      <form #userForm=\"ngForm\" (ngSubmit)=\"onSubmit()\" novalidate>\n        <section class=\"\">\n          <div *ngFor=\"let i of ingredientKeys\">\n            <div class=\"col\">\n            <h2>{{i}}</h2>\n            <div *ngFor=\"let j of ingredient[i]\" [ngModelGroup]=i>\n              <mat-checkbox class=\"example-margin\" [name]=\"j\" [(ngModel)]=basketModel[i][j]>{{j}}</mat-checkbox>\n            </div>\n          </div>\n        </div>\n        </section>\n        <button type=\"submit\" mat-raised-button color=\"primary\">Submdfgdfgit</button>\n      </form>\n    </mat-card-content>\n  </mat-card> -->\n"
+
+/***/ }),
+
+/***/ "./src/app/components/ingredient-search/ingredient-search.component.scss":
+/*!*******************************************************************************!*\
+  !*** ./src/app/components/ingredient-search/ingredient-search.component.scss ***!
+  \*******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".inside_card {\n  position: absolute;\n  left: 2px;\n  top: 2px;\n  width: 95%;\n  height: 95%; }\n\n#handle {\n  background-color: #FFF;\n  width: 2vw;\n  height: 30vh;\n  border-radius: 10px;\n  box-shadow: 5px 10px 10px #596362; }\n"
+
+/***/ }),
+
+/***/ "./src/app/components/ingredient-search/ingredient-search.component.ts":
+/*!*****************************************************************************!*\
+  !*** ./src/app/components/ingredient-search/ingredient-search.component.ts ***!
+  \*****************************************************************************/
+/*! exports provided: IngredientSearchComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IngredientSearchComponent", function() { return IngredientSearchComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_ingredient_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/ingredient.service */ "./src/app/services/ingredient.service.ts");
+/* harmony import */ var _services_checkout_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/checkout.service */ "./src/app/services/checkout.service.ts");
+/* harmony import */ var _basket__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../basket */ "./src/app/basket.ts");
+/* harmony import */ var _services_keepsearch_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../services/keepsearch.service */ "./src/app/services/keepsearch.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+var IngredientSearchComponent = /** @class */ (function () {
+    function IngredientSearchComponent(ingredientService, checkoutService, keepsearchService, router) {
+        this.ingredientService = ingredientService;
+        this.checkoutService = checkoutService;
+        this.keepsearchService = keepsearchService;
+        this.router = router;
+        this.basketModel = new _basket__WEBPACK_IMPORTED_MODULE_3__["Basket"]({}, {}, {}, {}, {});
+        this.tiles = [
+        // {header: 'One', cols: 2, rows: 1, color: 'lightblue', ingredients: ['ah','dhdfh']},
+        // {header: 'Two', cols: 2, rows: 1, color: 'lightgreen', ingredients: ['ah']},
+        // {header: 'Three', cols: 2, rows: 1, color: 'lightpink', ingredients: ['ah']},
+        // {header: 'Four', cols: 2, rows: 1, color: '#DDBDF1', ingredients: ['ah']},
+        ];
+        this.ingredient = {};
+        this.ingredientKeys = [];
+    }
+    IngredientSearchComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        if (window.innerWidth >= 1200) {
+            this.cols_breakpoint = 1;
+        }
+        else if (window.innerWidth >= 600) {
+            this.cols_breakpoint = 2;
+        }
+        else {
+            this.cols_breakpoint = 3;
+        }
+        this.ingredientService.getIngredients()
+            .subscribe(function (data) {
+            _this.ingredient = data;
+            //console.log(this.ingredient[0]);
+            _this.ingredientKeys = Object.keys(_this.ingredient);
+            for (var i = 0; i < _this.ingredientKeys.length; i++) {
+                console.log(_this.ingredient[_this.ingredientKeys[i]]);
+                var newTile = { header: _this.ingredientKeys[i],
+                    cols: 5, rows: 4, color: 'rgba(143,225,9,0)',
+                    ingredients: _this.ingredient[_this.ingredientKeys[i]] };
+                _this.tiles.push(newTile);
+            }
+            //console.log(this.ingredientKeys);
+        });
+    };
+    IngredientSearchComponent.prototype.onResize = function (event) {
+        if (event.target.innerWidth >= 1200) {
+            this.cols_breakpoint = 1;
+        }
+        else if (event.target.innerWidth >= 600) {
+            this.cols_breakpoint = 2;
+        }
+        else {
+            this.cols_breakpoint = 3;
+        }
+    };
+    // is it possible to connect to the user, and recorc the search that was just sent in?
+    // just import the this.basketModel to array, and then make a dictionary where the key is the ingredient and value is the number of times searched
+    IngredientSearchComponent.prototype.onSubmit = function () {
+        var _this = this;
+        // .subscribe looks at the checkout event, wait until it is sucessful, then executes the code underneath
+        this.checkoutService.checkout(this.basketModel)
+            .subscribe(function (data) {
+            //console.log('Success!', data);
+            _this.keepsearchService.updateSearch(_this.basketModel.stringify());
+            //this.keepsearchService.updateSearch(JSON.stringify(this.basketModel));
+            _this.router.navigate(['/result']);
+        }, function (error) { return console.error('Error!', error); });
+    };
+    IngredientSearchComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-ingredient-search',
+            template: __webpack_require__(/*! ./ingredient-search.component.html */ "./src/app/components/ingredient-search/ingredient-search.component.html"),
+            styles: [__webpack_require__(/*! ./ingredient-search.component.scss */ "./src/app/components/ingredient-search/ingredient-search.component.scss")]
+        }),
+        __metadata("design:paramtypes", [_services_ingredient_service__WEBPACK_IMPORTED_MODULE_1__["IngredientService"],
+            _services_checkout_service__WEBPACK_IMPORTED_MODULE_2__["CheckoutService"],
+            _services_keepsearch_service__WEBPACK_IMPORTED_MODULE_4__["KeepsearchService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"]])
+    ], IngredientSearchComponent);
+    return IngredientSearchComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/video-search/video-search.component.html":
+/*!*********************************************************************!*\
+  !*** ./src/app/components/video-search/video-search.component.html ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"search-bar\">\n  <h2>Search for Videos</h2>\n  <mat-icon color=\"white\" class=\"material-icons\">search</mat-icon>\n  <mat-form-field>\n    <input matInput type=\"text\" placeholder=\"Fill in any ingredient name for cooking videos\" [(ngModel)]=\"value\">\n    <button mat-button *ngIf=\"value\" matSuffix mat-icon-button aria-label=\"Clear\" (click)=\"value=''\">\n      <mat-icon>close</mat-icon>\n    </button>\n  </mat-form-field>\n  <button mat-raised-button color=\"primary\" (click)=\"search()\">Search</button>\n\n  <div *ngIf=\"videos\">\n    <div *ngFor=\"let v of videos; let i = index\" [attr.data-index]=\"i\">\n      <div>\n        <iframe class=\"e2e-iframe-trusted-src\" width=\"640\" height=\"390\" [src]=\"safeVideoUrls[i]\"\n      allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\n      </div>\n    </div>\n  </div>\n\n\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/app/components/video-search/video-search.component.scss":
+/*!*********************************************************************!*\
+  !*** ./src/app/components/video-search/video-search.component.scss ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".search-bar {\n  margin-top: 5vh; }\n  .search-bar .mat-icon {\n    font-size: 16px; }\n  .search-bar .mat-form-field {\n    width: 500px;\n    color: black; }\n  .search-bar button {\n    margin-left: 10px; }\n  .search-bar iframe {\n    border: 0px;\n    width: 50%; }\n"
+
+/***/ }),
+
+/***/ "./src/app/components/video-search/video-search.component.ts":
+/*!*******************************************************************!*\
+  !*** ./src/app/components/video-search/video-search.component.ts ***!
+  \*******************************************************************/
+/*! exports provided: VideoSearchComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VideoSearchComponent", function() { return VideoSearchComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_api_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/api.service */ "./src/app/services/api.service.ts");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var VideoSearchComponent = /** @class */ (function () {
+    function VideoSearchComponent(apiService, sanitizer) {
+        this.apiService = apiService;
+        this.sanitizer = sanitizer;
+        this.value = "";
+        // disable this to safe me money from paying api co :(
+        // dist: this.videos = [];
+        this.safeVideoUrls = [];
+    }
+    // async in ts / angular
+    // https://medium.com/@balramchavan/using-async-await-feature-in-angular-587dd56fdc77
+    VideoSearchComponent.prototype.ngOnInit = function () {
+        //this.getVideoByIngredients();
+    };
+    VideoSearchComponent.prototype.getVideoByIngredients = function (query) {
+        var _this = this;
+        this.apiService.getVideoByIngredients(query).subscribe(function (data) {
+            _this.data = data;
+            _this.videos = data.videos;
+            console.log("Video is here", data);
+            _this.changeAllVideoUrls();
+        }, function (error) { return console.log("Error", error); });
+    };
+    VideoSearchComponent.prototype.search = function () {
+        this.getVideoByIngredients(this.value);
+    };
+    VideoSearchComponent.prototype.updateVideoUrl = function (id) {
+        // Appending an ID to a YouTube URL is safe.
+        // Always make sure to construct SafeValue objects as
+        // close as possible to the input data so
+        // that it's easier to check if the value is safe.
+        var dangerousVideoUrl = 'https://www.youtube.com/embed/' + id;
+        var safeVideoUrl = this.sanitizer.bypassSecurityTrustResourceUrl(dangerousVideoUrl);
+        return safeVideoUrl;
+    };
+    VideoSearchComponent.prototype.changeAllVideoUrls = function () {
+        console.log("start changing all videos to safe ones");
+        for (var _i = 0, _a = this.videos; _i < _a.length; _i++) {
+            var i = _a[_i];
+            console.log(i);
+            var url = this.updateVideoUrl(i.youTubeId);
+            this.safeVideoUrls.push(url);
+            console.log(this.safeVideoUrls);
+        }
+    };
+    VideoSearchComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: "app-video-search",
+            template: __webpack_require__(/*! ./video-search.component.html */ "./src/app/components/video-search/video-search.component.html"),
+            styles: [__webpack_require__(/*! ./video-search.component.scss */ "./src/app/components/video-search/video-search.component.scss")]
+        }),
+        __metadata("design:paramtypes", [_services_api_service__WEBPACK_IMPORTED_MODULE_1__["ApiService"],
+            _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["DomSanitizer"]])
+    ], VideoSearchComponent);
+    return VideoSearchComponent;
 }());
 
 
@@ -441,7 +813,7 @@ var AuthGuard = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<mat-toolbar color=\"primary\">\n  <span>Developed by Justin Liu & Xindi Xu</span>\n\n  <!-- This fills the remaining space of the current row -->\n  <span class=\"spacer\"></span>\n  <a href=\"mailto:xindixu@utexas.edu\"><i class=\"fas fa-envelope\"></i></a>\n  <a href=\"https://github.com/xindixu/view-the-world\"><i class=\"fab fa-github\"></i></a>\n</mat-toolbar>\n"
+module.exports = "<mat-toolbar color=\"primary\">\n  <span>Developed by Justin Liu & Xindi Xu</span>\n\n  <!-- This fills the remaining space of the current row -->\n  <span class=\"spacer\"></span>\n  <a href=\"mailto:xindixu@utexas.edu\"><i class=\"fas fa-envelope\"></i></a>\n  <a href=\"https://github.com/xindixu/stay-at-home\"><i class=\"fab fa-github\"></i></a>\n</mat-toolbar>\n"
 
 /***/ }),
 
@@ -648,7 +1020,7 @@ var DashboardComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"home\">\n\n  <div class=\"header\">\n    <h1>{{ title }}</h1>\n    <div class=\"search-bar\">\n      <mat-icon color=\"white\" class=\"material-icons\">search</mat-icon>\n      <mat-form-field>\n        <input matInput type=\"text\" placeholder=\"I have these in my fridge\" [(ngModel)]=\"value\">\n        <button mat-button *ngIf=\"value\" matSuffix mat-icon-button aria-label=\"Clear\" (click)=\"value=''\">\n          <mat-icon>close</mat-icon>\n        </button>\n      </mat-form-field>\n    </div>\n  </div>\n\n\n  <mat-card>\n    <mat-card-content>\n      <form #userForm=\"ngForm\" (ngSubmit)=\"onSubmit()\" novalidate>\n        {{ basketModel | json}}\n        <section class=\"ingredient-section\">\n          <div *ngFor=\"let i of ingredientKeys\">\n            <h2>{{i}}</h2>\n            <div *ngFor=\"let j of ingredient[i]\" [ngModelGroup]=\"i\">\n              <mat-checkbox class=\"example-margin\" [name]=\"j\" [(ngModel)]=basketModel[i][j]>{{j}}</mat-checkbox>\n            </div>\n          </div>\n        </section>\n        <button type=\"submit\" mat-raised-button color=\"primary\">Submit</button>\n      </form>\n    </mat-card-content>\n  </mat-card>\n\n  <br><br><br>\n\n</div>\n"
+module.exports = "<div id=\"home\">\n  <div class=\"header\">\n    <h1 id=\"header_title\">{{ title }}&nbsp;&nbsp;</h1>\n  </div>\n  <app-chatbot></app-chatbot>\n  <br>\n  <app-ingredient-search></app-ingredient-search>\n  <br>\n  <app-video-search></app-video-search>\n\n  <br><br>\n\n\n  <!--   <br><br><br> -->\n\n</div>\n"
 
 /***/ }),
 
@@ -659,7 +1031,7 @@ module.exports = "<div id=\"home\">\n\n  <div class=\"header\">\n    <h1>{{ titl
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "#home .header {\n  height: 40vh;\n  text-align: center; }\n  #home .header .search-bar {\n    margin-top: 5vh; }\n  #home .header .search-bar .mat-icon {\n      font-size: 16px; }\n  #home .header .search-bar .mat-form-field {\n      width: 500px;\n      color: black; }\n  .mat-checkbox-label {\n  color: black; }\n"
+module.exports = "#home {\n  background-image: linear-gradient(to bottom, #FFF, #DDD);\n  border-radius: 25px;\n  border-style: solid;\n  border-width: 5px;\n  border-color: #EEE;\n  box-shadow: inset 0 0 100px #BBB;\n  padding: 10px; }\n  #home .header {\n    text-align: center; }\n  #header_title {\n  float: right; }\n  .mat-checkbox-label {\n  color: black; }\n"
 
 /***/ }),
 
@@ -674,11 +1046,9 @@ module.exports = "#home .header {\n  height: 40vh;\n  text-align: center; }\n  #
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomeComponent", function() { return HomeComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _services_ingredient_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/ingredient.service */ "./src/app/services/ingredient.service.ts");
-/* harmony import */ var _services_checkout_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/checkout.service */ "./src/app/services/checkout.service.ts");
-/* harmony import */ var _basket__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../basket */ "./src/app/basket.ts");
-/* harmony import */ var _services_keepsearch_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../services/keepsearch.service */ "./src/app/services/keepsearch.service.ts");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _basket__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../basket */ "./src/app/basket.ts");
+/* harmony import */ var _services_keepsearch_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/keepsearch.service */ "./src/app/services/keepsearch.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -692,62 +1062,25 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
-
-
 var HomeComponent = /** @class */ (function () {
-    function HomeComponent(ingredientService, checkoutService, router, keepsearchService) {
-        this.ingredientService = ingredientService;
-        this.checkoutService = checkoutService;
+    function HomeComponent(router, keepsearchService) {
         this.router = router;
         this.keepsearchService = keepsearchService;
         this.value = "";
-        this.title = "Welcome to StayAtHome!";
-        this.basketModel = new _basket__WEBPACK_IMPORTED_MODULE_3__["Basket"]({}, {}, {}, {}, {});
+        this.title = "stay at home";
+        this.basketModel = new _basket__WEBPACK_IMPORTED_MODULE_1__["Basket"]({}, {}, {}, {}, {});
         this.ingredient = {};
         this.ingredientKeys = [];
     }
-    HomeComponent.prototype.ngOnInit = function () {
-        // this.ingredient = this._ingredientService.getIngredients();
-        // for (let i = 0; i < this.ingredient.length; i++) {
-        //   this.ingredientKeys[i] = Object.keys(this.ingredient[i])[0];
-        // }
-        var _this = this;
-        this.ingredientService.getIngredients()
-            .subscribe(function (data) {
-            _this.ingredient = data;
-            //console.log(this.ingredient[0]);
-            _this.ingredientKeys = Object.keys(_this.ingredient);
-            //console.log(this.ingredientKeys);
-        });
-    };
-    HomeComponent.prototype.onSubmit = function () {
-        var _this = this;
-        /*
-        Justin: would you possibly restructure the return value from the checkbox to
-        be something like ['apple','fish','chicken']
-        check this one
-        https://www.npmjs.com/package/ng2-checklist
-        and i need to sleep now :(
-        you were snooooorrring
-        */
-        this.checkoutService.checkout(this.basketModel)
-            .subscribe(function (data) {
-            //console.log('Success!', data);
-            _this.keepsearchService.updateSearch(_this.basketModel.stringify());
-            //this.keepsearchService.updateSearch(JSON.stringify(this.basketModel));
-            _this.router.navigate(['/result']);
-        }, function (error) { return console.error('Error!', error); });
-    };
+    HomeComponent.prototype.ngOnInit = function () { };
     HomeComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: 'app-home',
+            selector: "app-home",
             template: __webpack_require__(/*! ./home.component.html */ "./src/app/pages/home/home.component.html"),
             styles: [__webpack_require__(/*! ./home.component.scss */ "./src/app/pages/home/home.component.scss")]
         }),
-        __metadata("design:paramtypes", [_services_ingredient_service__WEBPACK_IMPORTED_MODULE_1__["IngredientService"],
-            _services_checkout_service__WEBPACK_IMPORTED_MODULE_2__["CheckoutService"],
-            _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"],
-            _services_keepsearch_service__WEBPACK_IMPORTED_MODULE_4__["KeepsearchService"]])
+        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"],
+            _services_keepsearch_service__WEBPACK_IMPORTED_MODULE_2__["KeepsearchService"]])
     ], HomeComponent);
     return HomeComponent;
 }());
@@ -933,7 +1266,7 @@ var ProfileComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h1>{{data.title}}</h1>\n<div>\n  <p>Total Time: {{data.readyInMinutes}} min</p>\n  <p>Prep Time: {{data.preparationMinutes}} min</p>\n  <p>Cooking Time: {{data.cookingMinutes}} min</p>\n  <p>Servings: {{data.servings}}</p>\n  <p>Likes: {{data.aggregateLikes}}</p>\n</div>\n<div><img [src]=\"data.image\" alt=\"\"></div>\n<div *ngFor=\"let step of data.analyzedInstructions[0].steps\">\n<p><span>{{step.number}}. </span>{{step.step}}</p>\n</div>\n"
+module.exports = "<div id=\"recipe\">\n\t<h1>{{data.title}}</h1>\n\t<div><img class=\"recipe_image\" [src]=\"data.image\" alt=\"\"></div>\n\t<div class=\"time\">\n\t  <p>Total Time: {{data.readyInMinutes}} min</p>\n\t  <p>Prep Time: {{data.preparationMinutes}} min</p>\n\t  <p>Cooking Time: {{data.cookingMinutes}} min</p>\n\t  <p>Servings: {{data.servings}}</p>\n\t  <p>Likes: {{data.aggregateLikes}}</p>\n\t</div>\n\t<h3>Instructions</h3>\n\t<div *ngFor=\"let step of data.analyzedInstructions[0].steps\">\n\t<p><span>{{step.number}}. </span>{{step.step}}</p>\n\t</div>\n\t<br>\n</div>"
 
 /***/ }),
 
@@ -944,7 +1277,7 @@ module.exports = "<h1>{{data.title}}</h1>\n<div>\n  <p>Total Time: {{data.readyI
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "#recipe {\n  background-image: linear-gradient(to bottom, #FFF, #DDD);\n  border-radius: 25px;\n  border-style: solid;\n  border-width: 5px;\n  border-color: #EEE;\n  box-shadow: inset 0 0 100px #BBB;\n  padding: 20px; }\n\n.recipe_image {\n  float: right;\n  width: 400px;\n  padding: 20px;\n  border-radius: 30px; }\n\n.time {\n  line-height: 0.7; }\n"
 
 /***/ }),
 
@@ -980,6 +1313,7 @@ var RecipeComponent = /** @class */ (function () {
     }
     RecipeComponent.prototype.ngOnInit = function () {
         var _this = this;
+        // get the search result from keepsearchService
         this.keepsearchService.currentSearch
             .subscribe(function (search) {
             _this.id = search;
@@ -1129,7 +1463,7 @@ var RegisterComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h1> Result for {{query}}</h1>\n<mat-card *ngFor=\"let i of data\" (click)=\"getRecipeDetail(i.id)\">\n  <mat-card-title>\n    {{i.title}}\n  </mat-card-title>\n  <mat-card-subtitle>\n    Likes: {{i.likes}}\n    Used ingredients: {{i.usedIngredientCount}}\n  </mat-card-subtitle>\n  <img [src]=\"i.image\" alt=\"\">\n  <mat-card-content>\n    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n  </mat-card-content>\n  <mat-card-actions>\n    <button mat-button mat-raised-button color=\"primary\">HEART</button>\n    <button mat-button mat-raised-button color=\"primary\">SHARE</button>\n  </mat-card-actions>\n</mat-card>\n"
+module.exports = "<div id=\"result\">\n  <h1> Result for {{query}}</h1>\n  <br>\n  <mat-grid-list cols=\"6\" rowHeight=\"80px\" (window:resize)=\"onResize($event)\">\n    <mat-grid-tile rowspan=\"5\" *ngFor=\"let i of data\" [colspan]=\"cols_breakpoint\">\n      <mat-card class=\"result_card\"  (click)=\"getRecipeDetail(i.id)\">\n        <mat-card-title>\n          <h4>{{i.title}}</h4>\n        </mat-card-title>\n        <mat-card-subtitle>\n          Likes: {{i.likes}}\n          Used ingredients: {{i.usedIngredientCount}}\n        </mat-card-subtitle>\n        \n        <mat-card-content>\n          <div class=\"result_image\">\n            <img mat-card-image [src]=\"i.image\" alt=\"\">\n          </div>\n        </mat-card-content>\n      </mat-card>\n    </mat-grid-tile>\n  </mat-grid-list>\n</div>"
 
 /***/ }),
 
@@ -1140,7 +1474,7 @@ module.exports = "<h1> Result for {{query}}</h1>\n<mat-card *ngFor=\"let i of da
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".mat-card {\n  margin-bottom: 20px; }\n"
+module.exports = ".mat-card {\n  margin-bottom: 20px; }\n\n#result {\n  background-image: linear-gradient(to bottom, #FFF, #DDD);\n  border-radius: 25px;\n  border-style: solid;\n  border-width: 5px;\n  border-color: #EEE;\n  box-shadow: inset 0 0 100px #BBB;\n  padding: 20px; }\n\n#result .header {\n    text-align: center; }\n\n#result .result_image {\n    float: left;\n    border-radius: 10px;\n    margin-top: 20px;\n    padding-left: 20px;\n    padding-right: 20px; }\n\n.result_card {\n  position: absolute;\n  left: 2px;\n  top: 2px;\n  cursor: pointer;\n  width: 95%;\n  height: 95%; }\n"
 
 /***/ }),
 
@@ -1179,13 +1513,33 @@ var ResultComponent = /** @class */ (function () {
     }
     ResultComponent.prototype.ngOnInit = function () {
         var _this = this;
+        if (window.innerWidth >= 1000) {
+            this.cols_breakpoint = 2;
+        }
+        else if (window.innerWidth >= 600) {
+            this.cols_breakpoint = 3;
+        }
+        else {
+            this.cols_breakpoint = 6;
+        }
         this.keepsearchService.currentSearch
             .subscribe(function (search) {
             _this.query = search;
         });
-        this.getSearchResult();
+        this.getRecipeSearchResult();
     };
-    ResultComponent.prototype.getSearchResult = function () {
+    ResultComponent.prototype.onResize = function (event) {
+        if (event.target.innerWidth >= 1000) {
+            this.cols_breakpoint = 2;
+        }
+        else if (event.target.innerWidth >= 600) {
+            this.cols_breakpoint = 3;
+        }
+        else {
+            this.cols_breakpoint = 6;
+        }
+    };
+    ResultComponent.prototype.getRecipeSearchResult = function () {
         // test if api is working with hard code
         var _this = this;
         // [{},{},{}] length depends on option passed to apiin backend
@@ -1255,11 +1609,18 @@ var ApiService = /** @class */ (function () {
     }
     ApiService.prototype.getRecipeByIngredients = function (ingredient) {
         // local: http://localhost:8080/api/findByIngredients
-        return this.http.get('http://localhost:8080/api/findByIngredients/' + ingredient);
+        return this.http.get('/api/findByIngredients/' + ingredient);
     };
     ApiService.prototype.getRecipeById = function (id) {
         // local: http://localhost:8080/api/getRecipeById
-        return this.http.get('http://localhost:8080/api/getRecipeById/' + id);
+        return this.http.get('/api/getRecipeById/' + id);
+    };
+    ApiService.prototype.getVideoByIngredients = function (ingredient) {
+        // local: http://localhost:8080/api/findByIngredients
+        return this.http.get('/api/getVideoByIngredients/' + ingredient);
+    };
+    ApiService.prototype.getAnswerByQuestion = function (text) {
+        return this.http.get('/api/chatbot/' + text);
     };
     ApiService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
@@ -1387,7 +1748,7 @@ var CheckoutService = /** @class */ (function () {
     function CheckoutService(_http) {
         this._http = _http;
         //_url = '/checkout';
-        this._url = 'http://localhost:8080/checkout';
+        this._url = '/checkout';
     }
     CheckoutService.prototype.checkout = function (basket) {
         return this._http.post(this._url, basket);

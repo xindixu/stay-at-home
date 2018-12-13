@@ -5,6 +5,7 @@ const cors = require('cors');
 const passport = require('passport');
 const mongoose = require('mongoose');
 const config = require('./config/database');
+const cookieParser = require('cookie-parser');
 
 
 //connect to database
@@ -68,6 +69,9 @@ app.post('/checkout', (req, res) => {
 //     'message': 'RECIPE GET'
 //   });
 // })
+
+
+app.use(cookieParser());
 
 //start server
 app.listen(port, () => {

@@ -4,7 +4,7 @@ const router = express.Router();
 const unirest = require("unirest");
 const url = require("url");
 const querystring = require("querystring");
-var URLSearchParams = require('url-search-params');
+//var URLSearchParams = require('url-search-params');
 
 const headers = {
   "X-RapidAPI-Key": "QbMSHHNOeumsh5jqIwu8zFSLKI6pp1Kw1qljsnfrSkq6hMGXns",

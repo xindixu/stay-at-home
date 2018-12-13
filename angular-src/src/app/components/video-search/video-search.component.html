@@ -1,4 +1,22 @@
-<div *ngFor="let v of videos; let i = index" [attr.data-index]="i">
-  <iframe class="e2e-iframe-trusted-src" width="640" height="390" [src]="safeVideoUrls[i]"
-  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="search-bar">
+  <h2>Search for Videos</h2>
+  <mat-icon color="white" class="material-icons">search</mat-icon>
+  <mat-form-field>
+    <input matInput type="text" placeholder="Fill in any ingredient name for cooking videos" [(ngModel)]="value">
+    <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-form-field>
+  <button mat-raised-button color="primary" (click)="search()">Search</button>
+
+  <div *ngIf="videos">
+    <div *ngFor="let v of videos; let i = index" [attr.data-index]="i">
+      <div>
+        <iframe class="e2e-iframe-trusted-src" width="640" height="390" [src]="safeVideoUrls[i]"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+
 </div>

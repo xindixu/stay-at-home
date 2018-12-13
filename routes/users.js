@@ -59,6 +59,7 @@ router.post('/authenticate', (req, res, next) => {
             email: user.email
           }
         });
+
       } else {
         return res.json({
           success: false,

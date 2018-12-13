@@ -13,6 +13,8 @@ export class ResultComponent implements OnInit {
   query: string;
   data: any[];
 
+  cols_breakpoint;
+
   constructor(
     private keepsearchService: KeepsearchService,
     private apiService: ApiService,
@@ -20,11 +22,33 @@ export class ResultComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    if (window.innerWidth >= 1000) {
+      this.cols_breakpoint = 2;
+    }
+    else if (window.innerWidth >= 600) {
+      this.cols_breakpoint = 3;
+    }
+    else {
+      this.cols_breakpoint = 6;
+    }
+
     this.keepsearchService.currentSearch
       .subscribe(search => {
         this.query = search;
       })
     this.getRecipeSearchResult();
+  }
+
+  onResize(event) {
+    if (event.target.innerWidth >= 1000) {
+      this.cols_breakpoint = 2;
+    }
+    else if (event.target.innerWidth >= 600) {
+      this.cols_breakpoint = 3;
+    }
+    else {
+      this.cols_breakpoint = 6;
+    }
   }
 
   getRecipeSearchResult(){

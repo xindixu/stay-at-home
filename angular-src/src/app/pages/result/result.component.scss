@@ -17,13 +17,22 @@
 }
 
 .result_image {
-	float: right;
-	height: 100%;
-	padding: 20px;
-	border-radius: 40px;
+	float: left;
+	border-radius: 10px;
+  margin-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.result_image_container {
+
 }
 
 .result_card {
-  max-height: 500px;
-  height: 300px;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+
+  width: 95%;
+  height: 95%;
 }

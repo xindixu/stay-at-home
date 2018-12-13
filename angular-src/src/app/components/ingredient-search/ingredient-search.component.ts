@@ -5,8 +5,6 @@ import { Basket } from '../../basket';
 import { KeepsearchService } from '../../services/keepsearch.service';
 import { Router } from '@angular/router';
 
-import {MatGridListModule} from '@angular/material/grid-list';
-
 export interface Tile {
   color: string;
   cols: number;

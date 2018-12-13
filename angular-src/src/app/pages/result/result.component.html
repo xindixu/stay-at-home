@@ -1,22 +1,23 @@
 <div id="result">
   <h1> Result for {{query}}</h1>
   <br>
-  <mat-card class="result_card" *ngFor="let i of data" (click)="getRecipeDetail(i.id)">
-    <img class="result_image" [src]="i.image" alt="">
-    <mat-card-title>
-      {{i.title}}
-    </mat-card-title>
-    <mat-card-subtitle>
-      Likes: {{i.likes}}
-      Used ingredients: {{i.usedIngredientCount}}
-    </mat-card-subtitle>
-    
-    <mat-card-content>
-      {{i.pairingText}}
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-button mat-raised-button color="primary">HEART</button>
-      <button mat-button mat-raised-button color="primary">SHARE</button>
-    </mat-card-actions>
-  </mat-card>
+  <mat-grid-list cols="6" rowHeight="80px" (window:resize)="onResize($event)">
+    <mat-grid-tile rowspan="5" *ngFor="let i of data" [colspan]="cols_breakpoint">
+      <mat-card class="result_card"  (click)="getRecipeDetail(i.id)">
+        <mat-card-title>
+          <h4>{{i.title}}</h4>
+        </mat-card-title>
+        <mat-card-subtitle>
+          Likes: {{i.likes}}
+          Used ingredients: {{i.usedIngredientCount}}
+        </mat-card-subtitle>
+        
+        <mat-card-content>
+          <div class="result_image">
+            <img mat-card-image [src]="i.image" alt="">
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
 </div>

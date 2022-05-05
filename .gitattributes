@@ -1,4 +1,5 @@
 # Auto detect text files and perform LF normalization
 * text=auto
-*.ts linguistic-language=typescript
-*.tsx linguistic-language=typescript
+*.ts linguist-language=typescript
+*.tsx linguist-language=typescript
+public/** linguist-generated
